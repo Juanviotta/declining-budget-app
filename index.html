@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0048)file:///Users/jvo/Downloads/family-budget_8.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Family Budget</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -17,7 +16,7 @@
   .login-card{background:#fff;border-radius:28px;padding:48px 36px;text-align:center;box-shadow:0 8px 40px rgba(100,85,70,.12);}
   .login-logo{font-size:48px;margin-bottom:12px;}
   .login-title{color:#2D2A26;font-size:26px;font-weight:800;margin-bottom:8px;}
-  .login-sub{color:#A89F95;font-size:14px;margin-bottom:32px;}
+  .login-sub{color:#6F665C;font-size:14px;margin-bottom:32px;}
   .login-users{display:flex;gap:16px;justify-content:center;}
   .login-btn{display:flex;flex-direction:column;align-items:center;gap:10px;background:#F7F5F0;border:2px solid;border-radius:18px;padding:20px 28px;cursor:pointer;min-width:100px;transition:transform .15s;}
   .login-btn:active{transform:scale(.96);}
@@ -26,13 +25,13 @@
 
   /* ── App Shell ── */
   #app{display:none;flex-direction:column;min-height:100vh;}
-  header{background:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;position:sticky;top:0;z-index:10;box-shadow:0 1px 6px rgba(100,85,70,.06);}
+  header{background:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;position:sticky;top:0;z-index:10;box-shadow:0 1px 6px rgba(100,85,70,.06);}
   .header-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;color:#2D2A26;}
   .month-nav{display:flex;align-items:center;gap:8px;}
-  .month-nav button{background:none;border:none;color:#A89F95;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;}
-  .month-label{font-weight:700;color:#2D2A26;font-size:14px;min-width:80px;text-align:center;}
+  .month-nav button{background:none;border:none;color:#6F665C;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;min-width:36px;min-height:40px;}
+  .month-label{font-weight:700;color:#2D2A26;font-size:14px;min-width:80px;text-align:center;background:none;border:none;cursor:pointer;font-family:inherit;}
   .user-badge{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;}
-  .signout-btn{background:none;border:1px solid #E4DFD6;border-radius:8px;color:#A89F95;font-size:12px;cursor:pointer;padding:4px 10px;}
+  .signout-btn{background:none;border:1px solid #E4DFD6;border-radius:8px;color:#6F665C;font-size:12px;cursor:pointer;padding:4px 10px;}
   .header-right{display:flex;align-items:center;gap:8px;}
 
   /* ── Sync indicator ── */
@@ -42,11 +41,11 @@
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 
   /* ── Main ── */
-  main{padding:16px;padding-bottom:90px;flex:1;}
+  main{padding:16px;padding-bottom:calc(100px + env(safe-area-inset-bottom));flex:1;}
 
   /* ── Tabs ── */
-  nav.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:1px solid #E4DFD6;display:flex;align-items:center;justify-content:space-around;padding:10px 0 14px;z-index:20;box-shadow:0 -2px 12px rgba(100,85,70,.07);}
-  .nav-item{display:flex;flex-direction:column;align-items:center;background:none;border:none;color:#C5BDB5;cursor:pointer;min-width:56px;padding:4px 0;font-size:10px;gap:2px;}
+  nav.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:1px solid #E4DFD6;display:flex;align-items:center;justify-content:space-around;padding:10px 0 calc(14px + env(safe-area-inset-bottom));z-index:20;box-shadow:0 -2px 12px rgba(100,85,70,.07);}
+  .nav-item{display:flex;flex-direction:column;align-items:center;background:none;border:none;color:#766D63;cursor:pointer;min-width:56px;padding:4px 0;font-size:10px;gap:2px;}
   .nav-item.active{color:#7B9E87;}
   .nav-item span.icon{font-size:20px;}
   .add-btn{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#7B9E87,#C97B7B);border:none;color:#fff;cursor:pointer;font-size:26px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(123,158,135,.4);margin-top:-10px;}
@@ -56,18 +55,18 @@
   .view.active{display:block;}
 
   /* ── Overview card ── */
-  .overview-card{background:linear-gradient(135deg,#7B9E87,#5E8470);border-radius:20px;padding:20px 20px 14px;margin-bottom:20px;box-shadow:0 4px 20px rgba(123,158,135,.3);}
+  .overview-card{background:linear-gradient(135deg,#5E8470,#4A6B58);border-radius:20px;padding:20px 20px 14px;margin-bottom:20px;box-shadow:0 4px 20px rgba(123,158,135,.3);}
   .ov-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px;}
-  .ov-label{color:rgba(255,255,255,.7);font-size:12px;margin-bottom:2px;}
+  .ov-label{color:rgba(255,255,255,.9);font-size:12px;margin-bottom:2px;}
   .ov-value{color:#fff;font-size:26px;font-weight:800;}
   .ov-value.danger{color:#FFD4D4;}
   .progress-bg{background:rgba(255,255,255,.25);border-radius:99px;height:7px;overflow:hidden;margin-bottom:6px;}
   .progress-fill{height:100%;border-radius:99px;transition:width .4s ease;}
   .ov-meta{display:flex;justify-content:space-between;}
-  .ov-meta span{color:rgba(255,255,255,.55);font-size:11px;}
+  .ov-meta span{color:rgba(255,255,255,.9);font-size:11px;}
 
   /* ── Section label ── */
-  .section-label{color:#A89F95;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+  .section-label{color:#6F665C;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
 
   /* ── Category grid ── */
   .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
@@ -75,8 +74,8 @@
   .cat-card-name{font-weight:700;color:#2D2A26;font-size:13px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:flex-start;}
   .cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:2px;}
   .cat-remaining{font-size:20px;font-weight:800;margin-bottom:2px;}
-  .cat-sub{color:#A89F95;font-size:11px;margin-bottom:10px;}
-  .cat-spent{color:#C5BDB5;font-size:10px;margin-top:4px;}
+  .cat-sub{color:#6F665C;font-size:11px;margin-bottom:10px;}
+  .cat-spent{color:#766D63;font-size:10px;margin-top:4px;}
   .over-budget-card{border:1.5px solid #C97B7B !important;background:#FFF8F8 !important;}
   .over-budget-badge{font-size:14px;line-height:1;}
 
@@ -86,34 +85,34 @@
   .tx-dot{width:10px;height:10px;border-radius:50%;}
   .tx-info{flex:1;margin-left:12px;}
   .tx-name{color:#2D2A26;font-weight:600;font-size:13px;}
-  .tx-meta{color:#A89F95;font-size:11px;}
-  .tx-amount{color:#C97B7B;font-weight:700;font-size:15px;margin-right:6px;}
+  .tx-meta{color:#6F665C;font-size:11px;}
+  .tx-amount{color:#A85656;font-weight:700;font-size:15px;margin-right:6px;}
   .tx-actions{display:flex;align-items:center;gap:6px;}
-  .edit-btn{background:#F7F5F0;border:1px solid #E4DFD6;border-radius:8px;color:#7A7068;font-size:12px;padding:4px 10px;cursor:pointer;}
-  .del-btn{background:none;border:none;color:#C97B7B;font-size:18px;cursor:pointer;padding:0 4px;}
+  .edit-btn{background:#F7F5F0;border:1px solid #E4DFD6;border-radius:8px;color:#5C544B;font-size:13px;padding:0 12px;min-height:36px;cursor:pointer;}
+  .del-btn{background:none;border:none;color:#A85656;font-size:20px;cursor:pointer;min-width:40px;min-height:40px;}
 
   /* ── Filter pills ── */
   .filter-row{display:flex;gap:8px;margin-bottom:16px;overflow-x:auto;padding-bottom:2px;}
-  .filter-btn{background:#fff;border:1px solid #E4DFD6;border-radius:20px;color:#A89F95;font-size:13px;padding:6px 14px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+  .filter-btn{background:#fff;border:1px solid #E4DFD6;border-radius:20px;color:#5C544B;font-size:13px;padding:0 14px;min-height:36px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
   .filter-btn.active{background:#EDF3EF;border-color:#7B9E87;color:#5E8470;}
 
   /* ── Categories list ── */
-  .add-cat-btn{width:100%;background:#fff;border:2px dashed #D9D3CB;border-radius:14px;color:#A89F95;font-size:14px;font-weight:600;padding:14px;cursor:pointer;margin-bottom:16px;}
+  .add-cat-btn{width:100%;background:#fff;border:2px dashed #D9D3CB;border-radius:14px;color:#6F665C;font-size:14px;font-weight:600;padding:14px;cursor:pointer;margin-bottom:16px;}
   .cat-list-row{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;border:1px solid #E4DFD6;box-shadow:0 1px 4px rgba(100,85,70,.05);}
   .cat-list-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;}
   .cat-list-info{flex:1;margin-left:14px;}
   .cat-list-name{color:#2D2A26;font-weight:700;font-size:14px;}
-  .cat-list-sub{color:#A89F95;font-size:12px;}
+  .cat-list-sub{color:#6F665C;font-size:12px;}
 
   /* ── Reports ── */
   .stat-grid{display:flex;justify-content:space-between;padding:4px 0;}
   .stat-item{}
-  .stat-label{color:rgba(255,255,255,.7);font-size:11px;margin-bottom:4px;}
+  .stat-label{color:rgba(255,255,255,.9);font-size:11px;margin-bottom:4px;}
   .stat-value{color:#fff;font-size:20px;font-weight:800;}
   .user-cards{display:flex;gap:12px;margin-bottom:20px;}
   .user-card{flex:1;background:#F7F5F0;border-radius:14px;padding:14px 16px;border:1px solid #E4DFD6;}
   .user-card-amt{color:#2D2A26;font-weight:700;font-size:18px;}
-  .user-card-name{color:#A89F95;font-size:12px;}
+  .user-card-name{color:#6F665C;font-size:12px;}
   .bar-row{margin-bottom:14px;}
   .bar-labels{display:flex;justify-content:space-between;margin-bottom:5px;}
   .bar-name{color:#2D2A26;font-size:13px;font-weight:600;}
@@ -123,25 +122,26 @@
   .insight-body{color:#7A7068;font-size:13px;}
 
   /* ── Empty state ── */
-  .empty{color:#C5BDB5;text-align:center;margin-top:60px;font-size:14px;}
+  .empty{color:#766D63;text-align:center;margin-top:60px;font-size:14px;}
 
   /* ── Modal ── */
   .modal-overlay{position:fixed;inset:0;background:rgba(45,42,38,.4);display:flex;align-items:flex-end;justify-content:center;z-index:100;backdrop-filter:blur(4px);display:none;}
   .modal-overlay.open{display:flex;}
-  .modal-card{background:#fff;border-radius:24px 24px 0 0;padding:24px 20px 32px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;}
+  .modal-card{background:#fff;border-radius:24px 24px 0 0;padding:24px 20px calc(32px + env(safe-area-inset-bottom));width:100%;max-width:480px;max-height:90vh;max-height:90dvh;overflow-y:auto;overscroll-behavior:contain;}
   .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
   .modal-title{color:#2D2A26;font-weight:800;font-size:18px;}
-  .modal-close{background:none;border:none;color:#C5BDB5;font-size:28px;cursor:pointer;line-height:1;}
-  label.field-label{display:block;color:#A89F95;font-size:12px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
-  input.field, select.field{width:100%;background:#F7F5F0;border:1px solid #E4DFD6;border-radius:12px;color:#2D2A26;font-size:16px;padding:12px 14px;margin-bottom:16px;outline:none;}
-  .primary-btn{width:100%;background:linear-gradient(135deg,#7B9E87,#5E8470);border:none;border-radius:14px;color:#fff;font-size:16px;font-weight:700;padding:14px;cursor:pointer;margin-top:4px;box-shadow:0 4px 14px rgba(123,158,135,.35);}
+  .modal-close{background:none;border:none;color:#766D63;font-size:28px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;}
+  label.field-label{display:block;color:#6F665C;font-size:12px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
+  input.field, select.field{width:100%;background:#F7F5F0;border:1px solid #E4DFD6;border-radius:12px;color:#2D2A26;font-size:16px;padding:12px 14px;margin-bottom:16px;}
+  input.field:focus, select.field:focus{border-color:#4A6B58;}
+  .primary-btn{width:100%;background:linear-gradient(135deg,#5E8470,#4A6B58);border:none;border-radius:14px;color:#fff;font-size:16px;font-weight:700;padding:14px;cursor:pointer;margin-top:4px;box-shadow:0 4px 14px rgba(123,158,135,.35);}
   .color-palette{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
-  .color-swatch{width:28px;height:28px;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:border .15s;}
+  .color-swatch{width:36px;height:36px;padding:0;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:border .15s;}
   .color-swatch.selected{border-color:#2D2A26;}
   .remaining-hint{font-size:12px;margin-bottom:12px;margin-top:-10px;}
 
   /* ── Toast ── */
-  #toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#2D2A26;color:#F7F5F0;border-radius:14px;padding:12px 20px;font-size:13px;font-weight:600;z-index:200;box-shadow:0 8px 24px rgba(45,42,38,.25);white-space:nowrap;max-width:90vw;display:none;pointer-events:none;}
+  #toast{position:fixed;bottom:calc(96px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#2D2A26;color:#F7F5F0;border-radius:14px;padding:12px 20px;font-size:13px;font-weight:600;z-index:200;box-shadow:0 8px 24px rgba(45,42,38,.25);max-width:90vw;display:none;align-items:center;gap:14px;}
 
 
   /* ── PIN Screen ── */
@@ -149,7 +149,7 @@
   .pin-card{background:#fff;border-radius:28px;padding:36px 28px 32px;text-align:center;box-shadow:0 8px 40px rgba(100,85,70,.12);width:300px;}
   .pin-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:28px;margin:0 auto 12px;}
   .pin-name{color:#2D2A26;font-size:20px;font-weight:800;margin-bottom:4px;}
-  .pin-sub{color:#A89F95;font-size:13px;margin-bottom:24px;}
+  .pin-sub{color:#6F665C;font-size:13px;margin-bottom:24px;}
   .pin-dots{display:flex;gap:14px;justify-content:center;margin-bottom:28px;}
   .pin-dot{width:14px;height:14px;border-radius:50%;background:#E4DFD6;transition:background .15s;}
   .pin-dot.filled{background:#7B9E87;}
@@ -157,626 +157,272 @@
   .pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;}
   .pin-key{background:#F7F5F0;border:1px solid #E4DFD6;border-radius:14px;height:56px;font-size:20px;font-weight:700;color:#2D2A26;cursor:pointer;transition:background .1s,transform .1s;}
   .pin-key:active{background:#E4DFD6;transform:scale(.95);}
-  .pin-key.del{color:#A89F95;font-size:16px;}
+  .pin-key.del{color:#6F665C;font-size:16px;}
   .pin-key.empty{background:transparent;border:none;cursor:default;}
-  .pin-back{background:none;border:none;color:#A89F95;font-size:13px;cursor:pointer;margin-top:8px;text-decoration:underline;}
+  .pin-back{background:none;border:none;color:#6F665C;font-size:13px;cursor:pointer;margin-top:8px;text-decoration:underline;}
   .pin-error{color:#C97B7B;font-size:12px;min-height:18px;margin-bottom:10px;}
 
   /* ── Loading ── */
   #loading{position:fixed;inset:0;background:#F7F5F0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;z-index:999;}
   .spinner{width:36px;height:36px;border:3px solid #E4DFD6;border-top-color:#7B9E87;border-radius:50%;animation:spin .8s linear infinite;}
   @keyframes spin{to{transform:rotate(360deg);}}
+  /* ── Added: accessibility, pace, forms ── */
+  :focus-visible{outline:3px solid #4A6B58;outline-offset:2px;}
+  .cat-card:focus-visible{outline-offset:3px;}
+  .ov-value.danger{color:#FFE3E3;}
+  .over-budget-card .cat-remaining,.over-text{color:#A85656 !important;}
+  .ok-text{color:#4F7360;}
+  .pace{display:flex;justify-content:space-between;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:600;}
+  .pace small{font-weight:400;opacity:.9;}
+  .log-summary{color:#5C544B;font-size:13px;margin:-6px 0 12px;}
+  .form-error{color:#A85656;font-size:13px;min-height:18px;margin:-6px 0 10px;}
+  .primary-btn[disabled]{opacity:.6;cursor:wait;}
+  .secondary-btn{width:100%;background:#F7F5F0;border:1px solid #E4DFD6;border-radius:14px;color:#2D2A26;font-size:15px;font-weight:600;padding:12px;cursor:pointer;margin-top:10px;}
+  .detail-actions{display:flex;gap:10px;margin-bottom:14px;}
+  .detail-actions .secondary-btn{margin-top:0;}
+  #toast button{background:none;border:none;color:#BFE3CC;font-weight:800;font-size:13px;cursor:pointer;text-decoration:underline;min-height:32px;}
+  .empty-card{background:#fff;border:1px dashed #D9D3CB;border-radius:18px;padding:20px;text-align:center;color:#5C544B;font-size:14px;margin-bottom:20px;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
 </style>
 </head>
 <body>
 
 <!-- Loading -->
-<div id="loading" style="display: none;">
-  <div style="font-size:36px">💰</div>
-  <div class="spinner"></div>
-  <div style="color:#A89F95;font-size:13px;">Connecting…</div>
+<div id="loading" role="status" aria-live="polite">
+  <div style="font-size:36px" aria-hidden="true">💰</div>
+  <div class="spinner" aria-hidden="true"></div>
+  <div style="color:#6F665C;font-size:13px;">Connecting…</div>
 </div>
 
 <!-- Login -->
-<div id="login-screen" style="display: none;">
+<div id="login-screen" style="display:none;">
   <div class="login-card">
-    <div class="login-logo">💰</div>
+    <div class="login-logo" aria-hidden="true">💰</div>
     <h1 class="login-title">Family Budget</h1>
-    <p class="login-sub">Select your profile</p>
-    <div class="login-users">
-      <button class="login-btn" style="border-color:#C97B7B;" onclick="selectUser(&#39;DAY&#39;)">
-        <div class="login-avatar" style="background:#C97B7B;">D</div>
-        <span class="login-name">DAY</span>
-      </button>
-      <button class="login-btn" style="border-color:#7B9E87;" onclick="selectUser(&#39;JVO&#39;)">
-        <div class="login-avatar" style="background:#7B9E87;">J</div>
-        <span class="login-name">JVO</span>
-      </button>
-    </div>
+    <p class="login-sub">Who's logging in?</p>
+    <div class="login-users" id="login-users"></div>
   </div>
 </div>
 
-
 <!-- PIN Screen -->
-<div id="pin-screen" style="display: none;">
-  <div class="pin-card">
-    <div class="pin-avatar" id="pin-avatar" style="background: rgb(123, 158, 135);">J</div>
-    <div class="pin-name" id="pin-name">JVO</div>
-    <div class="pin-sub">Enter your PIN</div>
-    <div class="pin-error" id="pin-error"></div>
-    <div class="pin-dots">
-      <div class="pin-dot filled" id="pd0"></div>
-      <div class="pin-dot filled" id="pd1"></div>
-      <div class="pin-dot filled" id="pd2"></div>
-      <div class="pin-dot filled" id="pd3"></div>
+<div id="pin-screen" style="display:none;">
+  <div class="pin-card" role="group" aria-labelledby="pin-name">
+    <div class="pin-avatar" id="pin-avatar" aria-hidden="true"></div>
+    <h1 class="pin-name" id="pin-name"></h1>
+    <div class="pin-sub">Enter your 4-digit PIN</div>
+    <div class="pin-error" id="pin-error" role="alert"></div>
+    <div class="pin-dots" aria-hidden="true">
+      <div class="pin-dot" id="pd0"></div>
+      <div class="pin-dot" id="pd1"></div>
+      <div class="pin-dot" id="pd2"></div>
+      <div class="pin-dot" id="pd3"></div>
     </div>
+    <div class="sr-only" id="pin-progress" aria-live="polite"></div>
     <div class="pin-pad">
-      <button class="pin-key" onclick="pinKey(&#39;1&#39;)">1</button>
-      <button class="pin-key" onclick="pinKey(&#39;2&#39;)">2</button>
-      <button class="pin-key" onclick="pinKey(&#39;3&#39;)">3</button>
-      <button class="pin-key" onclick="pinKey(&#39;4&#39;)">4</button>
-      <button class="pin-key" onclick="pinKey(&#39;5&#39;)">5</button>
-      <button class="pin-key" onclick="pinKey(&#39;6&#39;)">6</button>
-      <button class="pin-key" onclick="pinKey(&#39;7&#39;)">7</button>
-      <button class="pin-key" onclick="pinKey(&#39;8&#39;)">8</button>
-      <button class="pin-key" onclick="pinKey(&#39;9&#39;)">9</button>
-      <button class="pin-key empty"></button>
-      <button class="pin-key" onclick="pinKey(&#39;0&#39;)">0</button>
-      <button class="pin-key del" onclick="pinBackspace()">⌫</button>
+      <button class="pin-key" data-pin="1">1</button>
+      <button class="pin-key" data-pin="2">2</button>
+      <button class="pin-key" data-pin="3">3</button>
+      <button class="pin-key" data-pin="4">4</button>
+      <button class="pin-key" data-pin="5">5</button>
+      <button class="pin-key" data-pin="6">6</button>
+      <button class="pin-key" data-pin="7">7</button>
+      <button class="pin-key" data-pin="8">8</button>
+      <button class="pin-key" data-pin="9">9</button>
+      <span class="pin-key empty" aria-hidden="true"></span>
+      <button class="pin-key" data-pin="0">0</button>
+      <button class="pin-key del" id="pin-del" aria-label="Delete last digit">⌫</button>
     </div>
-    <button class="pin-back" onclick="backToUsers()">← Back</button>
+    <button class="pin-back" id="pin-back">Not you? Switch profile</button>
   </div>
 </div>
 
 <!-- App -->
-<div id="app" style="display: flex;">
+<div id="app" style="display:none;">
   <header>
-    <div class="header-brand">💰 Family Budget <div class="sync-dot" id="sync-dot"></div></div>
+    <div class="header-brand"><span aria-hidden="true">💰</span> Budget <div class="sync-dot" id="sync-dot" role="img" aria-label="Synced" title="Synced"></div></div>
     <div class="month-nav">
-      <button onclick="changeMonth(-1)">‹</button>
-      <span class="month-label" id="month-label">Apr 2026</span>
-      <button onclick="changeMonth(1)">›</button>
+      <button id="month-prev" aria-label="Previous month">‹</button>
+      <button class="month-label" id="month-label" title="Jump to this month"></button>
+      <button id="month-next" aria-label="Next month">›</button>
     </div>
     <div class="header-right">
-      <div class="user-badge" id="user-badge" style="background: rgb(123, 158, 135);">J</div>
-      <button class="signout-btn" onclick="signOut()">Sign out</button>
+      <div class="user-badge" id="user-badge" aria-hidden="true"></div>
+      <button class="signout-btn" id="signout-btn">Sign out</button>
     </div>
   </header>
 
   <main>
     <!-- Dashboard -->
-    <div class="view" id="view-dashboard">
+    <section class="view active" id="view-dashboard" aria-label="Home">
       <div class="overview-card">
         <div class="ov-row">
-          <div><div class="ov-label">Total Budget</div><div class="ov-value" id="ov-budget">$3406.00</div></div>
-          <div style="text-align:right"><div class="ov-label">Remaining</div><div class="ov-value" id="ov-remaining">$1519.40</div></div>
+          <div><div class="ov-label">Total budget</div><div class="ov-value" id="ov-budget">–</div></div>
+          <div style="text-align:right"><div class="ov-label" id="ov-remaining-lbl">Left to spend</div><div class="ov-value" id="ov-remaining">–</div></div>
         </div>
-        <div class="progress-bg"><div class="progress-fill" id="ov-bar" style="width: 55.3905%; background: rgba(255, 255, 255, 0.85);"></div></div>
-        <div class="ov-meta"><span id="ov-spent-lbl">Spent: $1886.60</span><span id="ov-pct-lbl">55% used</span></div>
+        <div class="progress-bg" role="progressbar" aria-label="Share of budget used" aria-valuemin="0" aria-valuemax="100" id="ov-progress"><div class="progress-fill" id="ov-bar"></div></div>
+        <div class="ov-meta"><span id="ov-spent-lbl"></span><span id="ov-pct-lbl"></span></div>
+        <div class="pace" id="ov-pace"></div>
       </div>
-      <div class="section-label">Categories</div>
-      <div class="cat-grid" id="cat-grid"><div class="cat-card" onclick="openCategoryDetail(&#39;cat_01&#39;)">
-      <div class="cat-card-name">
-        Groceries
-        <div class="cat-dot" style="background:#7B9E87"></div>
-      </div>
-      <div class="cat-remaining" style="color:#7B9E87">$445.76</div>
-      <div class="cat-sub">remaining of $1000.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:55.42399999999999%;background:#7B9E87"></div></div>
-      <div class="cat-spent">Spent: $554.24</div>
-    </div><div class="cat-card over-budget-card" onclick="openCategoryDetail(&#39;cat_02&#39;)">
-      <div class="cat-card-name">
-        Restaurants
-        <span class="over-budget-badge">⚠️</span>
-      </div>
-      <div class="cat-remaining" style="color:#C97B7B">-$238.90</div>
-      <div class="cat-sub">over budget of $410.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:100%;background:#C97B7B"></div></div>
-      <div class="cat-spent">Spent: $648.90</div>
-    </div><div class="cat-card over-budget-card" onclick="openCategoryDetail(&#39;cat_03&#39;)">
-      <div class="cat-card-name">
-        Starbucks
-        <span class="over-budget-badge">⚠️</span>
-      </div>
-      <div class="cat-remaining" style="color:#C97B7B">-$54.72</div>
-      <div class="cat-sub">over budget of $100.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:100%;background:#C97B7B"></div></div>
-      <div class="cat-spent">Spent: $154.72</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_04&#39;)">
-      <div class="cat-card-name">
-        Gas
-        <div class="cat-dot" style="background:#7B96BE"></div>
-      </div>
-      <div class="cat-remaining" style="color:#7B96BE">$41.69</div>
-      <div class="cat-sub">remaining of $200.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:79.155%;background:#BE9B7B"></div></div>
-      <div class="cat-spent">Spent: $158.31</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_05&#39;)">
-      <div class="cat-card-name">
-        Car Wash &amp; Parking
-        <div class="cat-dot" style="background:#7BBEB5"></div>
-      </div>
-      <div class="cat-remaining" style="color:#7BBEB5">$35.00</div>
-      <div class="cat-sub">remaining of $50.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:30%;background:#7BBEB5"></div></div>
-      <div class="cat-spent">Spent: $15.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_06&#39;)">
-      <div class="cat-card-name">
-        Clothing
-        <div class="cat-dot" style="background:#BE7B9E"></div>
-      </div>
-      <div class="cat-remaining" style="color:#BE7B9E">$195.10</div>
-      <div class="cat-sub">remaining of $200.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:2.45%;background:#BE7B9E"></div></div>
-      <div class="cat-spent">Spent: $4.90</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_07&#39;)">
-      <div class="cat-card-name">
-        Amazon
-        <div class="cat-dot" style="background:#A07BBE"></div>
-      </div>
-      <div class="cat-remaining" style="color:#A07BBE">$44.06</div>
-      <div class="cat-sub">remaining of $100.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:55.94%;background:#A07BBE"></div></div>
-      <div class="cat-spent">Spent: $55.94</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_08&#39;)">
-      <div class="cat-card-name">
-        Capital One (JVO)
-        <div class="cat-dot" style="background:#BEB87B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#BEB87B">$40.00</div>
-      <div class="cat-sub">remaining of $40.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#BEB87B"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_09&#39;)">
-      <div class="cat-card-name">
-        Merrick (JVO)
-        <div class="cat-dot" style="background:#BE977B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#BE977B">$40.00</div>
-      <div class="cat-sub">remaining of $40.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#BE977B"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_10&#39;)">
-      <div class="cat-card-name">
-        Wells Fargo (JVO)
-        <div class="cat-dot" style="background:#8FBE7B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#8FBE7B">$40.00</div>
-      <div class="cat-sub">remaining of $40.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#8FBE7B"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_11&#39;)">
-      <div class="cat-card-name">
-        Citi Diamond (DAY)
-        <div class="cat-dot" style="background:#7B9E87"></div>
-      </div>
-      <div class="cat-remaining" style="color:#7B9E87">$261.00</div>
-      <div class="cat-sub">remaining of $261.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#7B9E87"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_12&#39;)">
-      <div class="cat-card-name">
-        Medical &amp; Pharmacy
-        <div class="cat-dot" style="background:#C97B7B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#C97B7B">$125.00</div>
-      <div class="cat-sub">remaining of $150.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:16.666666666666664%;background:#C97B7B"></div></div>
-      <div class="cat-spent">Spent: $25.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_13&#39;)">
-      <div class="cat-card-name">
-        Kids Activities
-        <div class="cat-dot" style="background:#7B96BE"></div>
-      </div>
-      <div class="cat-remaining" style="color:#7B96BE">$44.35</div>
-      <div class="cat-sub">remaining of $100.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:55.65%;background:#7B96BE"></div></div>
-      <div class="cat-spent">Spent: $55.65</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_14&#39;)">
-      <div class="cat-card-name">
-        Family Support
-        <div class="cat-dot" style="background:#A07BBE"></div>
-      </div>
-      <div class="cat-remaining" style="color:#A07BBE">$90.00</div>
-      <div class="cat-sub">remaining of $90.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#A07BBE"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_15&#39;)">
-      <div class="cat-card-name">
-        Enzo Soccer
-        <div class="cat-dot" style="background:#BE9B7B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#BE9B7B">$350.00</div>
-      <div class="cat-sub">remaining of $350.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#BE9B7B"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div><div class="cat-card over-budget-card" onclick="openCategoryDetail(&#39;cat_16&#39;)">
-      <div class="cat-card-name">
-        Misc
-        <span class="over-budget-badge">⚠️</span>
-      </div>
-      <div class="cat-remaining" style="color:#C97B7B">-$138.94</div>
-      <div class="cat-sub">over budget of $75.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:100%;background:#C97B7B"></div></div>
-      <div class="cat-spent">Spent: $213.94</div>
-    </div><div class="cat-card" onclick="openCategoryDetail(&#39;cat_17&#39;)">
-      <div class="cat-card-name">
-        Savings
-        <div class="cat-dot" style="background:#BEB87B"></div>
-      </div>
-      <div class="cat-remaining" style="color:#BEB87B">$200.00</div>
-      <div class="cat-sub">remaining of $200.00</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:0%;background:#BEB87B"></div></div>
-      <div class="cat-spent">Spent: $0.00</div>
-    </div></div>
-      <div class="section-label" id="recent-label" style="display: block;">Recent Transactions</div>
-      <div id="recent-list"><div class="tx-row">
-    <div class="tx-icon" style="background:#C97B7B22"><div class="tx-dot" style="background:#C97B7B"></div></div>
-    <div class="tx-info">
-      <div class="tx-name">Restaurants</div>
-      <div class="tx-meta">Ke Cachapas · DAY · 4/18/2026</div>
-    </div>
-    <div class="tx-actions"><span class="tx-amount">−$41.43</span></div>
-  </div><div class="tx-row">
-    <div class="tx-icon" style="background:#C97B7B22"><div class="tx-dot" style="background:#C97B7B"></div></div>
-    <div class="tx-info">
-      <div class="tx-name">Restaurants</div>
-      <div class="tx-meta">Chick-fil-a · DAY · 4/18/2026</div>
-    </div>
-    <div class="tx-actions"><span class="tx-amount">−$28.10</span></div>
-  </div><div class="tx-row">
-    <div class="tx-icon" style="background:#7B9E8722"><div class="tx-dot" style="background:#7B9E87"></div></div>
-    <div class="tx-info">
-      <div class="tx-name">Groceries</div>
-      <div class="tx-meta">Publix · DAY · 4/18/2026</div>
-    </div>
-    <div class="tx-actions"><span class="tx-amount">−$43.06</span></div>
-  </div><div class="tx-row">
-    <div class="tx-icon" style="background:#C97B7B22"><div class="tx-dot" style="background:#C97B7B"></div></div>
-    <div class="tx-info">
-      <div class="tx-name">Restaurants</div>
-      <div class="tx-meta">Sabores · DAY · 4/18/2026</div>
-    </div>
-    <div class="tx-actions"><span class="tx-amount">−$17.09</span></div>
-  </div><div class="tx-row">
-    <div class="tx-icon" style="background:#C97B7B22"><div class="tx-dot" style="background:#C97B7B"></div></div>
-    <div class="tx-info">
-      <div class="tx-name">Restaurants</div>
-      <div class="tx-meta">Sabor Vzlano · DAY · 4/18/2026</div>
-    </div>
-    <div class="tx-actions"><span class="tx-amount">−$26.15</span></div>
-  </div></div>
-    </div>
+      <div id="dash-empty"></div>
+      <h2 class="section-label">Categories</h2>
+      <div class="cat-grid" id="cat-grid"></div>
+      <h2 class="section-label" id="recent-label">Latest expenses</h2>
+      <div id="recent-list"></div>
+    </section>
 
     <!-- Log -->
-    <div class="view" id="view-log">
-      <div class="filter-row">
-        <button class="filter-btn active" onclick="setFilter(&#39;all&#39;,this)">All</button>
-        <button class="filter-btn" onclick="setFilter(&#39;DAY&#39;,this)">DAY</button>
-        <button class="filter-btn" onclick="setFilter(&#39;JVO&#39;,this)">JVO</button>
-      </div>
+    <section class="view" id="view-log" aria-label="Expense log">
+      <div class="filter-row" id="log-filters" role="group" aria-label="Filter by person"></div>
+      <div class="log-summary" id="log-summary" aria-live="polite"></div>
       <div id="tx-list"></div>
-    </div>
+    </section>
 
     <!-- Categories -->
-    <div class="view" id="view-categories">
-      <button class="add-cat-btn" onclick="openModal(&#39;modal-addcat&#39;)">+ Add Category</button>
+    <section class="view" id="view-categories" aria-label="Categories">
+      <button class="add-cat-btn" data-open="modal-addcat">+ Add category</button>
       <div id="cat-list"></div>
-    </div>
+    </section>
 
     <!-- Reports -->
-    <div class="view active" id="view-reports">
-      <div class="filter-row" id="report-months"><button class="filter-btn active" onclick="setReportMonth(&#39;2026-04&#39;,this)">Apr 2026</button></div>
-      <div id="report-content">
-    <div class="overview-card" style="margin-bottom:20px">
-      <div class="stat-grid">
-        <div class="stat-item"><div class="stat-label">Total Spent</div><div class="stat-value">$1886.60</div></div>
-        <div class="stat-item"><div class="stat-label">Remaining</div><div class="stat-value">$1519.40</div></div>
-        <div class="stat-item"><div class="stat-label">Transactions</div><div class="stat-value">67</div></div>
-      </div>
-    </div>
-    <div class="section-label" style="margin-bottom:10px">By Person</div>
-    <div class="user-cards">
-      
-        <div class="user-card">
-          <div class="user-badge" style="background:#C97B7B;margin-bottom:8px">D</div>
-          <div class="user-card-amt">$849.13</div>
-          <div class="user-card-name">DAY</div>
-        </div>
-        <div class="user-card">
-          <div class="user-badge" style="background:#7B9E87;margin-bottom:8px">J</div>
-          <div class="user-card-amt">$1037.47</div>
-          <div class="user-card-name">JVO</div>
-        </div>
-    </div>
-    <div class="section-label" style="margin-bottom:12px">By Category vs Specific Budget</div>
-    <div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Restaurants</span>
-          <span class="bar-amt" style="color:#C97B7B">$648.90 <span style="color:#A89F95;font-weight:400">(158% of $410)</span> <span style="color:#C97B7B;font-size:11px">⚠️</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:100%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Groceries</span>
-          <span class="bar-amt" style="color:#7B9E87">$554.24 <span style="color:#A89F95;font-weight:400">(55% of $1000)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:55.42399999999999%;background:#7B9E87"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Misc</span>
-          <span class="bar-amt" style="color:#C97B7B">$213.94 <span style="color:#A89F95;font-weight:400">(285% of $75)</span> <span style="color:#C97B7B;font-size:11px">⚠️</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:100%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Gas</span>
-          <span class="bar-amt" style="color:#7B96BE">$158.31 <span style="color:#A89F95;font-weight:400">(79% of $200)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:79.155%;background:#7B96BE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Starbucks</span>
-          <span class="bar-amt" style="color:#C97B7B">$154.72 <span style="color:#A89F95;font-weight:400">(155% of $100)</span> <span style="color:#C97B7B;font-size:11px">⚠️</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:100%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Amazon</span>
-          <span class="bar-amt" style="color:#A07BBE">$55.94 <span style="color:#A89F95;font-weight:400">(56% of $100)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:55.94%;background:#A07BBE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Kids Activities</span>
-          <span class="bar-amt" style="color:#7B96BE">$55.65 <span style="color:#A89F95;font-weight:400">(56% of $100)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:55.65%;background:#7B96BE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Medical &amp; Pharmacy</span>
-          <span class="bar-amt" style="color:#C97B7B">$25.00 <span style="color:#A89F95;font-weight:400">(17% of $150)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:16.666666666666664%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Car Wash &amp; Parking</span>
-          <span class="bar-amt" style="color:#7BBEB5">$15.00 <span style="color:#A89F95;font-weight:400">(30% of $50)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:30%;background:#7BBEB5"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Clothing</span>
-          <span class="bar-amt" style="color:#BE7B9E">$4.90 <span style="color:#A89F95;font-weight:400">(2% of $200)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:2.45%;background:#BE7B9E"></div>
-        </div>
-      </div>
-    <div class="section-label" style="margin-bottom:12px;margin-top:24px">By Category vs Main Budget</div>
-    <div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Restaurants</span>
-          <span class="bar-amt" style="color:#C97B7B">$648.90 <span style="color:#A89F95;font-weight:400">(34%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:34.39520831124773%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Groceries</span>
-          <span class="bar-amt" style="color:#7B9E87">$554.24 <span style="color:#A89F95;font-weight:400">(29%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:29.377716527085756%;background:#7B9E87"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Misc</span>
-          <span class="bar-amt" style="color:#7BBEB5">$213.94 <span style="color:#A89F95;font-weight:400">(11%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:11.339976677621113%;background:#7BBEB5"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Gas</span>
-          <span class="bar-amt" style="color:#7B96BE">$158.31 <span style="color:#A89F95;font-weight:400">(8%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:8.391285911162937%;background:#7B96BE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Starbucks</span>
-          <span class="bar-amt" style="color:#BE9B7B">$154.72 <span style="color:#A89F95;font-weight:400">(8%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:8.200996501643164%;background:#BE9B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Amazon</span>
-          <span class="bar-amt" style="color:#A07BBE">$55.94 <span style="color:#A89F95;font-weight:400">(3%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:2.965122442489133%;background:#A07BBE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Kids Activities</span>
-          <span class="bar-amt" style="color:#7B96BE">$55.65 <span style="color:#A89F95;font-weight:400">(3%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:2.949750874589207%;background:#7B96BE"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Medical &amp; Pharmacy</span>
-          <span class="bar-amt" style="color:#C97B7B">$25.00 <span style="color:#A89F95;font-weight:400">(1%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:1.3251351637867057%;background:#C97B7B"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Car Wash &amp; Parking</span>
-          <span class="bar-amt" style="color:#7BBEB5">$15.00 <span style="color:#A89F95;font-weight:400">(1%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:0.7950810982720234%;background:#7BBEB5"></div>
-        </div>
-      </div><div class="bar-row">
-        <div class="bar-labels">
-          <span class="bar-name">Clothing</span>
-          <span class="bar-amt" style="color:#BE7B9E">$4.90 <span style="color:#A89F95;font-weight:400">(0%)</span></span>
-        </div>
-        <div class="progress-bg" style="background:#F0EDE6">
-          <div class="progress-fill" style="width:0.2597264921021944%;background:#BE7B9E"></div>
-        </div>
-      </div>
-    <div class="insight-card"><div style="font-size:20px;margin-bottom:6px">💡</div>
-      <div class="insight-title">Top Spending: Restaurants</div>
-      <div class="insight-body">You spent $648.90 (34% of total) on Restaurants this month.</div>
-    </div></div>
-    </div>
+    <section class="view" id="view-reports" aria-label="Reports">
+      <div class="filter-row" id="report-months" role="group" aria-label="Report month"></div>
+      <div id="report-content"></div>
+    </section>
   </main>
 
-  <nav class="bottom">
-    <button class="nav-item" id="nav-dashboard" onclick="switchView(&#39;dashboard&#39;)"><span class="icon">🏠</span>Home</button>
-    <button class="nav-item" id="nav-log" onclick="switchView(&#39;log&#39;)"><span class="icon">📋</span>Log</button>
-    <button class="add-btn" onclick="openModal(&#39;modal-expense&#39;)">+</button>
-    <button class="nav-item" id="nav-categories" onclick="switchView(&#39;categories&#39;)"><span class="icon">🗂️</span>Categories</button>
-    <button class="nav-item active" id="nav-reports" onclick="switchView(&#39;reports&#39;)"><span class="icon">📊</span>Reports</button>
+  <nav class="bottom" aria-label="Main">
+    <button class="nav-item active" id="nav-dashboard" data-view="dashboard" aria-current="page"><span class="icon" aria-hidden="true">🏠</span>Home</button>
+    <button class="nav-item" id="nav-log" data-view="log"><span class="icon" aria-hidden="true">📋</span>Log</button>
+    <button class="add-btn" data-open="modal-expense" aria-label="Log an expense">+</button>
+    <button class="nav-item" id="nav-categories" data-view="categories"><span class="icon" aria-hidden="true">🗂️</span>Categories</button>
+    <button class="nav-item" id="nav-reports" data-view="reports"><span class="icon" aria-hidden="true">📊</span>Reports</button>
   </nav>
 </div>
 
 <!-- Toast -->
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
 <!-- ── Modals ── -->
 
 <!-- Log Expense -->
 <div class="modal-overlay" id="modal-expense">
-  <div class="modal-card">
+  <form class="modal-card" role="dialog" aria-modal="true" aria-labelledby="exp-title" id="form-expense" novalidate>
     <div class="modal-header">
-      <span class="modal-title">Log Expense</span>
-      <button class="modal-close" onclick="closeModal(&#39;modal-expense&#39;)">×</button>
+      <h2 class="modal-title" id="exp-title">Log expense</h2>
+      <button type="button" class="modal-close" data-close="modal-expense" aria-label="Close">×</button>
     </div>
-    <label class="field-label">Category</label>
-    <select class="field" id="exp-cat" onchange="updateRemainingHint()"></select>
-    <div class="remaining-hint" id="remaining-hint"></div>
-    <label class="field-label">Amount ($)</label>
-    <input class="field" type="number" id="exp-amount" step="0.01" min="0" placeholder="0.00">
-    <label class="field-label">Note (optional)</label>
-    <input class="field" type="text" id="exp-note" placeholder="e.g. Publix run">
-    <button class="primary-btn" onclick="submitExpense()">Log Expense</button>
-  </div>
+    <label class="field-label" for="exp-amount">Amount ($)</label>
+    <input class="field" type="number" id="exp-amount" step="0.01" min="0" inputmode="decimal" placeholder="0.00" autocomplete="off">
+    <label class="field-label" for="exp-cat">Category</label>
+    <select class="field" id="exp-cat"></select>
+    <div class="remaining-hint" id="remaining-hint" aria-live="polite"></div>
+    <label class="field-label" for="exp-date">Date</label>
+    <input class="field" type="date" id="exp-date">
+    <label class="field-label" for="exp-note">Note (optional)</label>
+    <input class="field" type="text" id="exp-note" placeholder="e.g. Publix run" maxlength="80" autocomplete="off">
+    <div class="form-error" id="exp-error" role="alert"></div>
+    <button class="primary-btn" type="submit">Log expense</button>
+  </form>
 </div>
 
 <!-- Edit Expense -->
 <div class="modal-overlay" id="modal-editexp">
-  <div class="modal-card">
+  <form class="modal-card" role="dialog" aria-modal="true" aria-labelledby="editexp-title" id="form-editexp" novalidate>
     <div class="modal-header">
-      <span class="modal-title">Edit Expense</span>
-      <button class="modal-close" onclick="closeModal(&#39;modal-editexp&#39;)">×</button>
+      <h2 class="modal-title" id="editexp-title">Edit expense</h2>
+      <button type="button" class="modal-close" data-close="modal-editexp" aria-label="Close">×</button>
     </div>
-    <label class="field-label">Category</label>
+    <label class="field-label" for="edit-exp-amount">Amount ($)</label>
+    <input class="field" type="number" id="edit-exp-amount" step="0.01" min="0" inputmode="decimal" autocomplete="off">
+    <label class="field-label" for="edit-exp-cat">Category</label>
     <select class="field" id="edit-exp-cat"></select>
-    <label class="field-label">Amount ($)</label>
-    <input class="field" type="number" id="edit-exp-amount" step="0.01" min="0">
-    <label class="field-label">Note (optional)</label>
-    <input class="field" type="text" id="edit-exp-note" placeholder="e.g. Publix run">
-    <button class="primary-btn" onclick="submitEditExpense()">Save Changes</button>
-  </div>
+    <label class="field-label" for="edit-exp-date">Date</label>
+    <input class="field" type="date" id="edit-exp-date">
+    <label class="field-label" for="edit-exp-note">Note (optional)</label>
+    <input class="field" type="text" id="edit-exp-note" placeholder="e.g. Publix run" maxlength="80" autocomplete="off">
+    <div class="form-error" id="editexp-error" role="alert"></div>
+    <button class="primary-btn" type="submit">Save changes</button>
+    <button class="secondary-btn" type="button" id="editexp-delete" style="color:#A85656">Delete this expense</button>
+  </form>
 </div>
 
 <!-- Add Category -->
 <div class="modal-overlay" id="modal-addcat">
-  <div class="modal-card">
+  <form class="modal-card" role="dialog" aria-modal="true" aria-labelledby="addcat-title" id="form-addcat" novalidate>
     <div class="modal-header">
-      <span class="modal-title">New Category</span>
-      <button class="modal-close" onclick="closeModal(&#39;modal-addcat&#39;)">×</button>
+      <h2 class="modal-title" id="addcat-title">New category</h2>
+      <button type="button" class="modal-close" data-close="modal-addcat" aria-label="Close">×</button>
     </div>
-    <label class="field-label">Name</label>
-    <input class="field" type="text" id="addcat-name" placeholder="e.g. Groceries">
-    <label class="field-label">Monthly Budget ($)</label>
-    <input class="field" type="number" id="addcat-budget" step="0.01" min="0" placeholder="0.00">
-    <label class="field-label">Color</label>
-    <div class="color-palette" id="addcat-palette"></div>
-    <button class="primary-btn" onclick="submitAddCategory()">Add Category</button>
-  </div>
+    <label class="field-label" for="addcat-name">Name</label>
+    <input class="field" type="text" id="addcat-name" placeholder="e.g. Groceries" maxlength="40" autocomplete="off">
+    <label class="field-label" for="addcat-budget">Monthly budget ($)</label>
+    <input class="field" type="number" id="addcat-budget" step="0.01" min="0" inputmode="decimal" placeholder="0.00">
+    <div class="field-label" id="addcat-color-lbl">Color</div>
+    <div class="color-palette" id="addcat-palette" role="radiogroup" aria-labelledby="addcat-color-lbl"></div>
+    <div class="form-error" id="addcat-error" role="alert"></div>
+    <button class="primary-btn" type="submit">Add category</button>
+  </form>
 </div>
 
 <!-- Edit Category -->
 <div class="modal-overlay" id="modal-editcat">
-  <div class="modal-card">
+  <form class="modal-card" role="dialog" aria-modal="true" aria-labelledby="editcat-title" id="form-editcat" novalidate>
     <div class="modal-header">
-      <span class="modal-title">Edit Category</span>
-      <button class="modal-close" onclick="closeModal(&#39;modal-editcat&#39;)">×</button>
+      <h2 class="modal-title" id="editcat-title">Edit category</h2>
+      <button type="button" class="modal-close" data-close="modal-editcat" aria-label="Close">×</button>
     </div>
-    <label class="field-label">Name</label>
-    <input class="field" type="text" id="editcat-name">
-    <label class="field-label">Monthly Budget ($)</label>
-    <input class="field" type="number" id="editcat-budget" step="0.01" min="0">
-    <label class="field-label">Color</label>
-    <div class="color-palette" id="editcat-palette"></div>
-    <button class="primary-btn" onclick="submitEditCategory()">Save Changes</button>
-  </div>
+    <label class="field-label" for="editcat-name">Name</label>
+    <input class="field" type="text" id="editcat-name" maxlength="40" autocomplete="off">
+    <label class="field-label" for="editcat-budget">Monthly budget ($)</label>
+    <input class="field" type="number" id="editcat-budget" step="0.01" min="0" inputmode="decimal">
+    <div class="field-label" id="editcat-color-lbl">Color</div>
+    <div class="color-palette" id="editcat-palette" role="radiogroup" aria-labelledby="editcat-color-lbl"></div>
+    <div class="form-error" id="editcat-error" role="alert"></div>
+    <button class="primary-btn" type="submit">Save changes</button>
+  </form>
 </div>
 
-<!-- Edit Budget -->
 <!-- Category Detail -->
 <div class="modal-overlay" id="modal-catdetail">
-  <div class="modal-card">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="catdetail-title">
     <div class="modal-header">
       <div>
-        <div class="modal-title" id="catdetail-title"></div>
-        <div style="color:#A89F95;font-size:12px;margin-top:2px" id="catdetail-sub"></div>
+        <h2 class="modal-title" id="catdetail-title"></h2>
+        <div style="color:#6F665C;font-size:13px;margin-top:2px" id="catdetail-sub"></div>
       </div>
-      <button class="modal-close" onclick="closeModal(&#39;modal-catdetail&#39;)">×</button>
+      <button type="button" class="modal-close" data-close="modal-catdetail" aria-label="Close">×</button>
+    </div>
+    <div class="detail-actions">
+      <button class="secondary-btn" type="button" id="catdetail-log">+ Log expense here</button>
+      <button class="secondary-btn" type="button" id="catdetail-budget">Change this month's budget</button>
     </div>
     <div id="catdetail-list"></div>
   </div>
 </div>
 
+<!-- Edit this month's budget -->
 <div class="modal-overlay" id="modal-editbudget">
-  <div class="modal-card">
+  <form class="modal-card" role="dialog" aria-modal="true" aria-labelledby="editbudget-title" id="form-editbudget" novalidate>
     <div class="modal-header">
-      <span class="modal-title" id="editbudget-title">Budget</span>
-      <button class="modal-close" onclick="closeModal(&#39;modal-editbudget&#39;)">×</button>
+      <h2 class="modal-title" id="editbudget-title">Budget</h2>
+      <button type="button" class="modal-close" data-close="modal-editbudget" aria-label="Close">×</button>
     </div>
-    <label class="field-label">Monthly Budget ($)</label>
-    <input class="field" type="number" id="editbudget-amount" step="0.01" min="0">
-    <button class="primary-btn" onclick="submitEditBudget()">Update Budget</button>
-  </div>
+    <label class="field-label" for="editbudget-amount" id="editbudget-label">Budget for this month ($)</label>
+    <input class="field" type="number" id="editbudget-amount" step="0.01" min="0" inputmode="decimal">
+    <div style="color:#6F665C;font-size:13px;margin:-6px 0 14px">Only this month changes. Other months keep the category's regular budget.</div>
+    <div class="form-error" id="editbudget-error" role="alert"></div>
+    <button class="primary-btn" type="submit">Update budget</button>
+  </form>
 </div>
 
 <!-- ── Firebase + App Logic ── -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, onSnapshot, setDoc, updateDoc, arrayUnion, arrayRemove, getDoc }
+import { getFirestore, doc, onSnapshot, setDoc, updateDoc, arrayUnion, getDoc, runTransaction }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// ── YOUR FIREBASE CONFIG ──────────────────────────────────────────────────
+// ── Firebase config (public by design; access is controlled by Firestore security rules) ──
 const firebaseConfig = {
   apiKey: "AIzaSyCNpFiiGqNZQZQT8PnzKOnhR7piIuQSntA",
   authDomain: "declining-budget-65a6c.firebaseapp.com",
@@ -785,7 +431,6 @@ const firebaseConfig = {
   messagingSenderId: "24684326470",
   appId: "1:24684326470:web:16a859668faa3af3c7e0f0"
 };
-// ─────────────────────────────────────────────────────────────────────────
 
 const fbApp = initializeApp(firebaseConfig);
 const db = getFirestore(fbApp);
@@ -815,11 +460,51 @@ const DEFAULT_CATS = [
   {id:"cat_17",name:"Savings",budget:200,color:"#BEB87B"},
 ];
 
+// PINs are stored as salted SHA-256 hashes so they can't be read straight from the page source.
+// This is a convenience lock, not real security: a 4-digit PIN can be guessed by anyone who has the code.
+// To set a new PIN, open the app, then run this in the browser console and paste the result below:
+//   await hashPin("JVO", "1234")
+const PIN_HASHES = {
+  DAY: "db17f88fcce173040b625c04183b0bf6035ad339e8e49a228d429547bb0fcacd",
+  JVO: "d0e0527d142b3e09be23d2a6e9378b5ff8dca706fc95e9537b093f5709e6ab6f",
+};
+const MAX_PIN_TRIES = 5, PIN_LOCK_MS = 30000;
+
+// ── Small helpers ─────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const usd = new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
+const money = n => usd.format(Math.round((Number(n)||0)*100)/100);
+const cents = n => Math.round(n*100)/100;
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
+const safeColor = c => /^#[0-9a-fA-F]{3,8}$/.test(c||"") ? c : "#888888";
 function uid(){ return `id_${Date.now()}_${Math.random().toString(36).slice(2,7)}`; }
 function getMonthKey(d=new Date()){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`; }
+function monthLabel(mk){ const [y,m] = mk.split("-").map(Number); return `${MONTH_NAMES[m-1]} ${y}`; }
+function toDateInput(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function fromDateInput(v){ const [y,m,d] = v.split("-").map(Number); return new Date(y, m-1, d, 12); }
+function daysInMonth(mk){ const [y,m] = mk.split("-").map(Number); return new Date(y, m, 0).getDate(); }
+function parseAmount(v){ const n = parseFloat(v); return Number.isFinite(n) ? cents(n) : NaN; }
+function store(key, val){ try{ localStorage.setItem(key, val); }catch(e){} }
+function load(key){ try{ return localStorage.getItem(key); }catch(e){ return null; } }
+function friendlyDate(iso){
+  const d = new Date(iso), t = new Date();
+  const y = new Date(); y.setDate(t.getDate()-1);
+  if(d.toDateString()===t.toDateString()) return "Today";
+  if(d.toDateString()===y.toDateString()) return "Yesterday";
+  return d.toLocaleDateString(undefined,{month:"short",day:"numeric"});
+}
+
+async function sha256Hex(text){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+window.hashPin = (user, pin) => sha256Hex(`declining-budget:${user}:${pin}`);
 
 // ── State ─────────────────────────────────────────────────────────────────
 let state = { categories: DEFAULT_CATS, expenses: [], budgets: {} };
+let loaded = false;
 let currentUser = null;
 let currentMonth = getMonthKey();
 let currentView = "dashboard";
@@ -827,15 +512,18 @@ let logFilter = "all";
 let reportMonth = currentMonth;
 let editingExpenseId = null;
 let editingCatId = null;
-let editingBudgetCatId = null;
+let detailCatId = null;
 let selectedAddColor = PALETTE[0];
 let selectedEditColor = PALETTE[0];
 let unsubscribe = null;
+let lastFocus = null;
 
 // ── Firebase sync ─────────────────────────────────────────────────────────
 function setSyncStatus(s){ // "ok" | "syncing" | "error"
-  const dot = document.getElementById("sync-dot");
+  const dot = $("sync-dot");
   dot.className = "sync-dot" + (s==="syncing"?" syncing":s==="error"?" error":"");
+  const label = s==="syncing" ? "Syncing…" : s==="error" ? "Not synced, check your connection" : "Synced";
+  dot.title = label; dot.setAttribute("aria-label", label);
 }
 
 async function initFirestore(){
@@ -845,151 +533,227 @@ async function initFirestore(){
     if(!snap.exists()){
       await setDoc(DOC, { categories: DEFAULT_CATS, expenses: [], budgets: {}, version: 2 });
     } else {
-      // If old version or categories count is less than 17, reset categories only (keep expenses)
       const d = snap.data();
       if(!d.version || d.version < 2){
-        const expenses = d.expenses || [];
-        const budgets = d.budgets || {};
-        await setDoc(DOC, { categories: DEFAULT_CATS, expenses, budgets, version: 2 });
+        await setDoc(DOC, { categories: DEFAULT_CATS, expenses: d.expenses || [], budgets: d.budgets || {}, version: 2 });
       }
     }
-  } catch(e){ setSyncStatus("error"); }
+  } catch(e){
+    console.error(e);
+    setSyncStatus("error");
+    showToast("Couldn't connect. Showing the last data on this phone, if any.");
+  }
 
   unsubscribe = onSnapshot(DOC, (snap) => {
     if(snap.exists()){
-      state = snap.data();
-      state.categories = state.categories || DEFAULT_CATS;
-      state.expenses = state.expenses || [];
-      state.budgets = state.budgets || {};
+      const d = snap.data();
+      state = { ...d, categories: d.categories || DEFAULT_CATS, expenses: d.expenses || [], budgets: d.budgets || {} };
+      loaded = true;
+      $("loading").style.display = "none";
       setSyncStatus("ok");
       renderAll();
     }
-  }, ()=>setSyncStatus("error"));
+  }, (e)=>{ console.error(e); setSyncStatus("error"); $("loading").style.display = "none"; });
 }
 
+// Read-modify-write inside a transaction, so two phones editing at once don't erase each other's changes.
+function notReady(){
+  if(loaded) return false;
+  showToast("Still loading your budget. Try again in a moment.");
+  return true;
+}
+async function mutate(fn){
+  if(notReady()) return false;
+  setSyncStatus("syncing");
+  try{
+    await runTransaction(db, async tx => {
+      const snap = await tx.get(DOC);
+      const d = snap.exists() ? snap.data() : {};
+      const patch = fn({ categories: d.categories || DEFAULT_CATS, expenses: d.expenses || [], budgets: d.budgets || {} });
+      if(snap.exists()) tx.update(DOC, patch); else tx.set(DOC, { version: 2, categories: DEFAULT_CATS, expenses: [], budgets: {}, ...patch });
+    });
+    setSyncStatus("ok");
+    return true;
+  }catch(e){
+    console.error(e);
+    setSyncStatus("error");
+    showToast("Couldn't save. Check your connection and try again.");
+    return false;
+  }
+}
+async function safeWrite(promiseFn){
+  if(notReady()) return false;
+  setSyncStatus("syncing");
+  try{ await promiseFn(); setSyncStatus("ok"); return true; }
+  catch(e){ console.error(e); setSyncStatus("error"); showToast("Couldn't save. Check your connection and try again."); return false; }
+}
 
 // ── Auth & PIN ────────────────────────────────────────────────────────────
-const PINS = { DAY: "1212", JVO: "2563" };
 let pinBuffer = "";
 let pinUser = null;
+let pinTries = 0;
+let pinLockedUntil = 0;
 
-window.selectUser = function(user){
+function renderLoginUsers(){
+  $("login-users").innerHTML = Object.entries(USERS).map(([key,u])=>`
+    <button class="login-btn" style="border-color:${u.color};" data-user="${key}">
+      <div class="login-avatar" style="background:${u.color};" aria-hidden="true">${u.avatar}</div>
+      <span class="login-name">${u.label}</span>
+    </button>`).join("");
+}
+
+function showScreen(id){
+  ["login-screen","pin-screen","app"].forEach(s=>{ $(s).style.display = s===id ? "flex" : "none"; });
+}
+
+function selectUser(user){
   pinUser = user;
   pinBuffer = "";
-  document.getElementById("login-screen").style.display = "none";
-  const ps = document.getElementById("pin-screen");
-  ps.style.display = "flex";
-  document.getElementById("pin-avatar").textContent = USERS[user].avatar;
-  document.getElementById("pin-avatar").style.background = USERS[user].color;
-  document.getElementById("pin-name").textContent = user;
-  document.getElementById("pin-error").textContent = "";
+  showScreen("pin-screen");
+  $("pin-avatar").textContent = USERS[user].avatar;
+  $("pin-avatar").style.background = USERS[user].color;
+  $("pin-name").textContent = USERS[user].label;
+  $("pin-error").textContent = "";
   updatePinDots();
-};
+  document.querySelector('.pin-key[data-pin="1"]').focus();
+}
 
-window.pinKey = function(digit){
+function pinKey(digit){
+  if(Date.now() < pinLockedUntil) return;
   if(pinBuffer.length >= 4) return;
   pinBuffer += digit;
+  $("pin-error").textContent = "";
   updatePinDots();
   if(pinBuffer.length === 4) setTimeout(checkPin, 120);
-};
+}
 
-window.pinBackspace = function(){
+function pinBackspace(){
   pinBuffer = pinBuffer.slice(0,-1);
   updatePinDots(false);
-  document.getElementById("pin-error").textContent = "";
-};
+  $("pin-error").textContent = "";
+}
 
-window.backToUsers = function(){
-  document.getElementById("pin-screen").style.display = "none";
-  document.getElementById("login-screen").style.display = "flex";
+function backToUsers(){
+  showScreen("login-screen");
   pinBuffer = "";
   pinUser = null;
-};
+}
 
 function updatePinDots(showError=false){
   for(let i=0;i<4;i++){
-    const dot = document.getElementById("pd"+i);
-    dot.className = "pin-dot" + (i < pinBuffer.length ? " filled" : "") + (showError ? " error" : "");
+    $("pd"+i).className = "pin-dot" + (i < pinBuffer.length ? " filled" : "") + (showError ? " error" : "");
   }
+  $("pin-progress").textContent = `${pinBuffer.length} of 4 digits entered`;
 }
 
-function checkPin(){
-  if(pinBuffer === PINS[pinUser]){
-    document.getElementById("pin-screen").style.display = "none";
+async function checkPin(){
+  let ok = false;
+  try { ok = (await window.hashPin(pinUser, pinBuffer)) === PIN_HASHES[pinUser]; }
+  catch(e){ $("pin-error").textContent = "This browser can't check the PIN. Open the app from its https address."; }
+  if(ok){
+    pinTries = 0;
+    store("budget:lastUser", pinUser);
     loginUser(pinUser);
   } else {
+    pinTries++;
     updatePinDots(true);
-    document.getElementById("pin-error").textContent = "Incorrect PIN. Try again.";
-    setTimeout(()=>{
-      pinBuffer = "";
-      updatePinDots(false);
-    }, 900);
+    if(pinTries >= MAX_PIN_TRIES){
+      pinLockedUntil = Date.now() + PIN_LOCK_MS;
+      pinTries = 0;
+      $("pin-error").textContent = "Too many tries. Wait 30 seconds and try again.";
+    } else if(!$("pin-error").textContent){
+      $("pin-error").textContent = "Incorrect PIN. Try again.";
+    }
+    setTimeout(()=>{ pinBuffer = ""; updatePinDots(false); }, 900);
   }
 }
 
 async function loginUser(user){
   currentUser = user;
-  document.getElementById("app").style.display = "flex";
-  const badge = document.getElementById("user-badge");
+  showScreen("app");
+  const badge = $("user-badge");
   badge.textContent = USERS[user].avatar;
   badge.style.background = USERS[user].color;
+  currentMonth = getMonthKey();
+  reportMonth = currentMonth;
   renderMonthLabel();
+  renderLogFilters();
+  switchView("dashboard");
+  if(!loaded) $("loading").style.display = "flex";
   await initFirestore();
 }
 
-window.signOut = function(){
+function signOut(){
   if(unsubscribe) unsubscribe();
+  unsubscribe = null;
+  loaded = false;
   currentUser = null;
-  document.getElementById("app").style.display = "none";
-  document.getElementById("login-screen").style.display = "flex";
-};
+  document.querySelectorAll(".modal-overlay.open").forEach(m=>m.classList.remove("open"));
+  showScreen("login-screen");
+}
 
 // ── Month nav ─────────────────────────────────────────────────────────────
-window.changeMonth = function(dir){
+function changeMonth(dir){
   const [y,m] = currentMonth.split("-").map(Number);
-  const d = new Date(y, m-1+dir, 1);
-  currentMonth = getMonthKey(d);
+  currentMonth = getMonthKey(new Date(y, m-1+dir, 1));
   renderMonthLabel();
   renderAll();
-};
+}
 function renderMonthLabel(){
-  const [y,m] = currentMonth.split("-").map(Number);
-  document.getElementById("month-label").textContent = `${MONTH_NAMES[m-1]} ${y}`;
+  const isNow = currentMonth === getMonthKey();
+  $("month-label").textContent = monthLabel(currentMonth) + (isNow ? "" : " ↺");
+  $("month-label").setAttribute("aria-label", `${monthLabel(currentMonth)}${isNow ? ", this month" : ". Tap to go back to this month"}`);
 }
 
 // ── View switching ────────────────────────────────────────────────────────
-window.switchView = function(view){
+function switchView(view){
   document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
-  document.querySelectorAll(".nav-item").forEach(b=>b.classList.remove("active"));
-  document.getElementById(`view-${view}`).classList.add("active");
-  document.getElementById(`nav-${view}`)?.classList.add("active");
+  document.querySelectorAll(".nav-item").forEach(b=>{ b.classList.remove("active"); b.removeAttribute("aria-current"); });
+  $(`view-${view}`).classList.add("active");
+  const nav = $(`nav-${view}`);
+  if(nav){ nav.classList.add("active"); nav.setAttribute("aria-current","page"); }
   currentView = view;
+  if(view==="reports") reportMonth = currentMonth;
   renderAll();
-};
+}
 
 // ── Derived ───────────────────────────────────────────────────────────────
-function monthExpenses(mk=currentMonth){ return (state.expenses||[]).filter(e=>e.monthKey===mk); }
+const byNewest = (a,b) => new Date(b.date) - new Date(a.date);
+function monthExpenses(mk=currentMonth){ return (state.expenses||[]).filter(e=>e.monthKey===mk).sort(byNewest); }
+function catById(id){ return (state.categories||[]).find(c=>c.id===id); }
 
 function budgetForMonth(mk=currentMonth){
   const saved = (state.budgets||{})[mk] || {};
   const result = {};
-  (state.categories||[]).forEach(c=>{ result[c.id] = saved[c.id] ?? c.budget; });
+  (state.categories||[]).forEach(c=>{ result[c.id] = Number(saved[c.id] ?? c.budget) || 0; });
   return result;
 }
 
 function spentByCategory(mk=currentMonth){
   const map = {};
   (state.categories||[]).forEach(c=>{ map[c.id]=0; });
-  monthExpenses(mk).forEach(e=>{ if(map[e.categoryId]!==undefined) map[e.categoryId]+=e.amount; });
+  monthExpenses(mk).forEach(e=>{ if(map[e.categoryId]!==undefined) map[e.categoryId]+=Number(e.amount)||0; });
   return map;
+}
+
+// Days left in the month including today (current month only).
+function paceInfo(mk, left){
+  const now = getMonthKey();
+  if(mk < now) return { text: "Month closed", sub: left>=0 ? `Finished ${money(left)} under budget` : `Finished ${money(-left)} over budget` };
+  if(mk > now) return { text: "Upcoming month", sub: "" };
+  const daysLeft = daysInMonth(mk) - new Date().getDate() + 1;
+  if(left <= 0) return { text: `${daysLeft} day${daysLeft===1?"":"s"} left`, sub: "Budget used up for this month" };
+  return { text: `${money(left/daysLeft)} a day`, sub: `for the ${daysLeft} day${daysLeft===1?"":"s"} left` };
 }
 
 // ── Render all ────────────────────────────────────────────────────────────
 function renderAll(){
+  if(!currentUser) return;
   if(currentView==="dashboard") renderDashboard();
   if(currentView==="log") renderLog();
   if(currentView==="categories") renderCategories();
   if(currentView==="reports") renderReports();
+  if($("modal-catdetail").classList.contains("open")) renderCategoryDetail();
 }
 
 // ── Dashboard ─────────────────────────────────────────────────────────────
@@ -1001,72 +765,83 @@ function renderDashboard(){
   const left = totalBudget - totalSpent;
   const pct = totalBudget>0 ? Math.min(100,(totalSpent/totalBudget)*100) : 0;
 
-  document.getElementById("ov-budget").textContent = `$${totalBudget.toFixed(2)}`;
-  const remEl = document.getElementById("ov-remaining");
-  remEl.textContent = `$${Math.abs(left).toFixed(2)}${left<0?" over":""}`;
+  $("ov-budget").textContent = money(totalBudget);
+  $("ov-remaining-lbl").textContent = left<0 ? "Over budget" : "Left to spend";
+  const remEl = $("ov-remaining");
+  remEl.textContent = money(Math.abs(left));
   remEl.className = "ov-value" + (left<0?" danger":"");
-  const bar = document.getElementById("ov-bar");
+  const bar = $("ov-bar");
   bar.style.width = `${pct}%`;
   bar.style.background = pct>90?"#FFD4D4":pct>70?"#FFE8CC":"rgba(255,255,255,.85)";
-  document.getElementById("ov-spent-lbl").textContent = `Spent: $${totalSpent.toFixed(2)}`;
-  document.getElementById("ov-pct-lbl").textContent = `${pct.toFixed(0)}% used`;
+  $("ov-progress").setAttribute("aria-valuenow", pct.toFixed(0));
+  $("ov-spent-lbl").textContent = `Spent ${money(totalSpent)}`;
+  $("ov-pct-lbl").textContent = `${pct.toFixed(0)}% used`;
+  const pace = paceInfo(currentMonth, left);
+  $("ov-pace").innerHTML = `<span>${esc(pace.text)}</span><small>${esc(pace.sub)}</small>`;
 
-  // Category grid
-  const grid = document.getElementById("cat-grid");
-  grid.innerHTML = (state.categories||[]).map(cat=>{
+  const exps = monthExpenses();
+  $("dash-empty").innerHTML = (!exps.length && loaded)
+    ? `<div class="empty-card">No expenses in ${esc(monthLabel(currentMonth))} yet.<br><button class="secondary-btn" data-open="modal-expense" style="margin-top:12px">+ Log the first one</button></div>`
+    : "";
+
+  $("cat-grid").innerHTML = (state.categories||[]).map(cat=>{
     const budget = bfm[cat.id]||0;
     const spent = sbc[cat.id]||0;
     const l = budget-spent;
-    const p = budget>0?Math.min(100,(spent/budget)*100):0;
-    const barColor = p>90?"#C97B7B":p>70?"#BE9B7B":cat.color;
+    const p = budget>0?Math.min(100,(spent/budget)*100):(spent>0?100:0);
+    const color = safeColor(cat.color);
+    const barColor = p>90?"#C97B7B":p>70?"#BE9B7B":color;
     const overBudget = l < 0;
-    return `<div class="cat-card${overBudget?' over-budget-card':''}" onclick="openCategoryDetail('${cat.id}')">
+    const label = `${cat.name}: ${overBudget ? money(-l)+" over" : money(l)+" left"} of ${money(budget)}`;
+    return `<div class="cat-card${overBudget?' over-budget-card':''}" role="button" tabindex="0" data-cat="${esc(cat.id)}" aria-label="${esc(label)}">
       <div class="cat-card-name">
-        ${cat.name}
+        ${esc(cat.name)}
         ${overBudget
-          ? '<span class="over-budget-badge">⚠️</span>'
-          : `<div class="cat-dot" style="background:${cat.color}"></div>`}
+          ? '<span class="over-budget-badge" aria-hidden="true">⚠️</span>'
+          : `<div class="cat-dot" style="background:${color}" aria-hidden="true"></div>`}
       </div>
-      <div class="cat-remaining" style="color:${overBudget?"#C97B7B":cat.color}">${overBudget?"-":""}$${Math.abs(l).toFixed(2)}</div>
-      <div class="cat-sub">${overBudget?"over budget of":"remaining of"} $${budget.toFixed(2)}</div>
-      <div class="progress-bg"><div class="progress-fill" style="width:${p}%;background:${barColor}"></div></div>
-      <div class="cat-spent">Spent: $${spent.toFixed(2)}</div>
+      <div class="cat-remaining" style="color:${overBudget?"#A85656":"#2D2A26"}">${money(Math.abs(l))}</div>
+      <div class="cat-sub">${overBudget?"over":"left"} of ${money(budget)}</div>
+      <div class="progress-bg" aria-hidden="true"><div class="progress-fill" style="width:${p}%;background:${barColor}"></div></div>
+      <div class="cat-spent">Spent ${money(spent)}</div>
     </div>`;
   }).join("");
 
-  // Recent
-  const recent = monthExpenses().slice(0,5);
-  document.getElementById("recent-label").style.display = recent.length?"block":"none";
-  document.getElementById("recent-list").innerHTML = recent.map(e=>txRowHTML(e,false)).join("");
+  const recent = exps.slice(0,5);
+  $("recent-label").style.display = recent.length?"block":"none";
+  $("recent-list").innerHTML = recent.map(e=>txRowHTML(e,false)).join("");
 }
 
 // ── Log ───────────────────────────────────────────────────────────────────
-window.setFilter = function(f, btn){
-  logFilter = f;
-  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  renderLog();
-};
+function renderLogFilters(){
+  const opts = [["all","Everyone"], ...Object.keys(USERS).map(u=>[u,USERS[u].label])];
+  $("log-filters").innerHTML = opts.map(([v,l])=>
+    `<button class="filter-btn${logFilter===v?" active":""}" data-filter="${v}" aria-pressed="${logFilter===v}">${l}</button>`).join("");
+}
 
 function renderLog(){
+  renderLogFilters();
   const exps = monthExpenses().filter(e=>logFilter==="all"||e.user===logFilter);
-  const list = document.getElementById("tx-list");
-  list.innerHTML = exps.length ? exps.map(e=>txRowHTML(e,true)).join("") : `<div class="empty">No expenses this month</div>`;
+  const total = exps.reduce((s,e)=>s+(Number(e.amount)||0),0);
+  $("log-summary").textContent = exps.length ? `${exps.length} expense${exps.length===1?"":"s"} in ${monthLabel(currentMonth)} · ${money(total)}` : "";
+  $("tx-list").innerHTML = exps.length
+    ? exps.map(e=>txRowHTML(e,true)).join("")
+    : `<div class="empty">No expenses in ${esc(monthLabel(currentMonth))}${logFilter==="all"?"":" for "+esc(logFilter)}</div>`;
 }
 
 function txRowHTML(e, showActions){
-  const cat = (state.categories||[]).find(c=>c.id===e.categoryId);
-  const d = new Date(e.date);
+  const cat = catById(e.categoryId);
+  const color = safeColor(cat?.color);
   const actions = showActions ? `
-    <button class="edit-btn" onclick="openEditExpense('${e.id}')">Edit</button>
-    <button class="del-btn" onclick="deleteExpense('${e.id}')">×</button>` : "";
+    <button class="edit-btn" data-edit-exp="${esc(e.id)}" aria-label="Edit ${esc(cat?.name||"expense")} ${money(e.amount)}">Edit</button>
+    <button class="del-btn" data-del-exp="${esc(e.id)}" aria-label="Delete ${esc(cat?.name||"expense")} ${money(e.amount)}">×</button>` : "";
   return `<div class="tx-row">
-    <div class="tx-icon" style="background:${(cat?.color||"#888")}22"><div class="tx-dot" style="background:${cat?.color||"#888"}"></div></div>
+    <div class="tx-icon" style="background:${color}22" aria-hidden="true"><div class="tx-dot" style="background:${color}"></div></div>
     <div class="tx-info">
-      <div class="tx-name">${cat?.name||"Unknown"}</div>
-      <div class="tx-meta">${e.note||"—"} · ${e.user} · ${d.toLocaleDateString()}</div>
+      <div class="tx-name">${esc(cat?.name||"Unknown")}</div>
+      <div class="tx-meta">${esc(e.note||"No note")} · ${esc(e.user)} · ${esc(friendlyDate(e.date))}</div>
     </div>
-    <div class="tx-actions"><span class="tx-amount">−$${e.amount.toFixed(2)}</span>${actions}</div>
+    <div class="tx-actions"><span class="tx-amount">−${money(e.amount)}</span>${actions}</div>
   </div>`;
 }
 
@@ -1074,66 +849,66 @@ function txRowHTML(e, showActions){
 function renderCategories(){
   const bfm = budgetForMonth();
   const sbc = spentByCategory();
-  document.getElementById("cat-list").innerHTML = (state.categories||[]).map(cat=>`
+  $("cat-list").innerHTML = (state.categories||[]).map(cat=>`
     <div class="cat-list-row">
-      <div class="cat-list-dot" style="background:${cat.color}"></div>
+      <div class="cat-list-dot" style="background:${safeColor(cat.color)}" aria-hidden="true"></div>
       <div class="cat-list-info">
-        <div class="cat-list-name">${cat.name}</div>
-        <div class="cat-list-sub">Budget: $${(bfm[cat.id]||0).toFixed(2)} · Spent: $${(sbc[cat.id]||0).toFixed(2)}</div>
+        <div class="cat-list-name">${esc(cat.name)}</div>
+        <div class="cat-list-sub">Budget ${money(bfm[cat.id]||0)} · Spent ${money(sbc[cat.id]||0)}</div>
       </div>
-      <button class="edit-btn" onclick="openEditCat('${cat.id}')">Edit</button>
-      <button class="del-btn" onclick="deleteCat('${cat.id}')">×</button>
+      <button class="edit-btn" data-edit-cat="${esc(cat.id)}" aria-label="Edit ${esc(cat.name)}">Edit</button>
+      <button class="del-btn" data-del-cat="${esc(cat.id)}" aria-label="Delete ${esc(cat.name)}">×</button>
     </div>`).join("");
 }
 
 // ── Reports ───────────────────────────────────────────────────────────────
 function renderReports(){
-  const allMonths = [...new Set((state.expenses||[]).map(e=>e.monthKey))].sort().reverse();
-  if(!allMonths.includes(currentMonth)) allMonths.unshift(currentMonth);
+  const allMonths = [...new Set((state.expenses||[]).map(e=>e.monthKey))].filter(Boolean).sort().reverse();
+  if(!allMonths.includes(currentMonth)) { allMonths.push(currentMonth); allMonths.sort().reverse(); }
   const months = allMonths.slice(0,6);
   if(!months.includes(reportMonth)) reportMonth = months[0];
 
-  document.getElementById("report-months").innerHTML = months.map(mk=>{
-    const [y,m] = mk.split("-").map(Number);
-    return `<button class="filter-btn${mk===reportMonth?" active":""}" onclick="setReportMonth('${mk}',this)">${MONTH_NAMES[m-1]} ${y}</button>`;
-  }).join("");
+  $("report-months").innerHTML = months.map(mk=>
+    `<button class="filter-btn${mk===reportMonth?" active":""}" data-report="${esc(mk)}" aria-pressed="${mk===reportMonth}">${esc(monthLabel(mk))}</button>`).join("");
 
   const exps = monthExpenses(reportMonth);
-  const rc = document.getElementById("report-content");
-  if(!exps.length){ rc.innerHTML=`<div class="empty">No data for this month</div>`; return; }
+  const rc = $("report-content");
+  if(!exps.length){ rc.innerHTML=`<div class="empty">No expenses logged in ${esc(monthLabel(reportMonth))} yet</div>`; return; }
 
   const bfm = budgetForMonth(reportMonth);
   const totalBudget = Object.values(bfm).reduce((s,v)=>s+v,0);
-  const totalSpent = exps.reduce((s,e)=>s+e.amount,0);
+  const totalSpent = exps.reduce((s,e)=>s+(Number(e.amount)||0),0);
   const remaining = totalBudget - totalSpent;
 
-  const byUser = {DAY:0,JVO:0};
-  exps.forEach(e=>{ byUser[e.user]=(byUser[e.user]||0)+e.amount; });
+  const byUser = {};
+  Object.keys(USERS).forEach(u=>byUser[u]=0);
+  exps.forEach(e=>{ byUser[e.user]=(byUser[e.user]||0)+(Number(e.amount)||0); });
 
   const byCat = {};
-  (state.categories||[]).forEach(c=>{ byCat[c.id]={id:c.id,name:c.name,color:c.color,amount:0}; });
-  exps.forEach(e=>{ if(byCat[e.categoryId]) byCat[e.categoryId].amount+=e.amount; });
+  (state.categories||[]).forEach(c=>{ byCat[c.id]={id:c.id,name:c.name,color:safeColor(c.color),amount:0}; });
+  exps.forEach(e=>{ if(byCat[e.categoryId]) byCat[e.categoryId].amount+=Number(e.amount)||0; });
   const catArr = Object.values(byCat).filter(v=>v.amount>0).sort((a,b)=>b.amount-a.amount);
   const top = catArr[0];
+  const overCats = catArr.filter(c=>(bfm[c.id]||0)>0 && c.amount>bfm[c.id]);
 
   rc.innerHTML = `
     <div class="overview-card" style="margin-bottom:20px">
       <div class="stat-grid">
-        <div class="stat-item"><div class="stat-label">Total Spent</div><div class="stat-value">$${totalSpent.toFixed(2)}</div></div>
-        <div class="stat-item"><div class="stat-label">Remaining</div><div class="stat-value">$${remaining.toFixed(2)}</div></div>
-        <div class="stat-item"><div class="stat-label">Transactions</div><div class="stat-value">${exps.length}</div></div>
+        <div class="stat-item"><div class="stat-label">Spent</div><div class="stat-value">${money(totalSpent)}</div></div>
+        <div class="stat-item"><div class="stat-label">${remaining<0?"Over budget":"Left"}</div><div class="stat-value">${money(Math.abs(remaining))}</div></div>
+        <div class="stat-item"><div class="stat-label">Expenses</div><div class="stat-value">${exps.length}</div></div>
       </div>
     </div>
-    <div class="section-label" style="margin-bottom:10px">By Person</div>
+    <h2 class="section-label" style="margin-bottom:10px">By person</h2>
     <div class="user-cards">
       ${Object.entries(byUser).map(([u,amt])=>`
         <div class="user-card">
-          <div class="user-badge" style="background:${USERS[u].color};margin-bottom:8px">${USERS[u].avatar}</div>
-          <div class="user-card-amt">$${amt.toFixed(2)}</div>
-          <div class="user-card-name">${u}</div>
+          <div class="user-badge" style="background:${USERS[u]?.color||"#888"};margin-bottom:8px" aria-hidden="true">${esc(USERS[u]?.avatar||u[0])}</div>
+          <div class="user-card-amt">${money(amt)}</div>
+          <div class="user-card-name">${esc(u)}</div>
         </div>`).join("")}
     </div>
-    <div class="section-label" style="margin-bottom:12px">By Category vs Specific Budget</div>
+    <h2 class="section-label" style="margin-bottom:12px">Spent vs each category's budget</h2>
     ${catArr.map(c=>{
       const catBudget = bfm[c.id] || 0;
       const rawPct = catBudget > 0 ? (c.amount/catBudget)*100 : 0;
@@ -1142,242 +917,368 @@ function renderReports(){
       const ownBarColor = overOwn ? "#C97B7B" : rawPct > 80 ? "#BE9B7B" : c.color;
       return `<div class="bar-row">
         <div class="bar-labels">
-          <span class="bar-name">${c.name}</span>
-          <span class="bar-amt" style="color:${overOwn?"#C97B7B":c.color}">$${c.amount.toFixed(2)} <span style="color:#A89F95;font-weight:400">(${rawPct.toFixed(0)}% of $${catBudget.toFixed(0)})</span>${overOwn?' <span style="color:#C97B7B;font-size:11px">⚠️</span>':''}</span>
+          <span class="bar-name">${esc(c.name)}</span>
+          <span class="bar-amt" style="color:${overOwn?"#A85656":"#2D2A26"}">${money(c.amount)} <span style="color:#6F665C;font-weight:400">(${rawPct.toFixed(0)}% of ${money(catBudget)})</span>${overOwn?' <span style="font-size:11px">⚠️ over</span>':''}</span>
         </div>
-        <div class="progress-bg" style="background:#F0EDE6">
+        <div class="progress-bg" style="background:#F0EDE6" aria-hidden="true">
           <div class="progress-fill" style="width:${barPct}%;background:${ownBarColor}"></div>
         </div>
       </div>`;
     }).join("")}
-    <div class="section-label" style="margin-bottom:12px;margin-top:24px">By Category vs Main Budget</div>
+    <h2 class="section-label" style="margin-bottom:12px;margin-top:24px">Share of total spending</h2>
     ${catArr.map(c=>{
       const pct = totalSpent>0?(c.amount/totalSpent)*100:0;
       return `<div class="bar-row">
         <div class="bar-labels">
-          <span class="bar-name">${c.name}</span>
-          <span class="bar-amt" style="color:${c.color}">$${c.amount.toFixed(2)} <span style="color:#A89F95;font-weight:400">(${pct.toFixed(0)}%)</span></span>
+          <span class="bar-name">${esc(c.name)}</span>
+          <span class="bar-amt" style="color:#2D2A26">${money(c.amount)} <span style="color:#6F665C;font-weight:400">(${pct.toFixed(0)}%)</span></span>
         </div>
-        <div class="progress-bg" style="background:#F0EDE6">
+        <div class="progress-bg" style="background:#F0EDE6" aria-hidden="true">
           <div class="progress-fill" style="width:${pct}%;background:${c.color}"></div>
         </div>
       </div>`;
     }).join("")}
-    ${top?`<div class="insight-card"><div style="font-size:20px;margin-bottom:6px">💡</div>
-      <div class="insight-title">Top Spending: ${top.name}</div>
-      <div class="insight-body">You spent $${top.amount.toFixed(2)} (${totalSpent>0?((top.amount/totalSpent)*100).toFixed(0):0}% of total) on ${top.name} this month.</div>
+    ${top?`<div class="insight-card"><div style="font-size:20px;margin-bottom:6px" aria-hidden="true">💡</div>
+      <div class="insight-title">Top spending: ${esc(top.name)}</div>
+      <div class="insight-body">${money(top.amount)} (${totalSpent>0?((top.amount/totalSpent)*100).toFixed(0):0}% of the total) went to ${esc(top.name)} in ${esc(monthLabel(reportMonth))}.${overCats.length?` ${overCats.length} categor${overCats.length===1?"y went":"ies went"} over budget: ${overCats.map(c=>esc(c.name)).join(", ")}.`:" Every category stayed within its budget."}</div>
     </div>`:""}`;
 }
 
-window.setReportMonth = function(mk, btn){
-  reportMonth = mk;
-  document.querySelectorAll("#report-months .filter-btn").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  renderReports();
-};
+// ── Actions: expenses ─────────────────────────────────────────────────────
+function defaultDateFor(mk){
+  const now = getMonthKey();
+  if(mk === now) return new Date();
+  const [y,m] = mk.split("-").map(Number);
+  return mk < now ? new Date(y, m, 0, 12) : new Date(y, m-1, 1, 12);
+}
+function dateToIso(inputVal){
+  if(!inputVal) return new Date().toISOString();
+  const d = fromDateInput(inputVal);
+  // Logging for today keeps the real time, so the newest entry sorts first.
+  if(d.toDateString() === new Date().toDateString()) return new Date().toISOString();
+  return d.toISOString();
+}
 
-// ── Actions ───────────────────────────────────────────────────────────────
-window.submitExpense = async function(){
-  const catId = document.getElementById("exp-cat").value;
-  const amount = parseFloat(document.getElementById("exp-amount").value);
-  const note = document.getElementById("exp-note").value.trim();
-  if(!catId||!amount||amount<=0) return;
-  const exp = { id:uid(), categoryId:catId, amount, note, user:currentUser, date:new Date().toISOString(), monthKey:currentMonth };
-  await updateDoc(DOC, { expenses: arrayUnion(exp) });
+function openExpenseModal(catId){
+  const catSel = $("exp-cat");
+  const preferred = catId || load("budget:lastCat");
+  catSel.innerHTML = (state.categories||[]).map(c=>`<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("");
+  if(preferred && catById(preferred)) catSel.value = preferred;
+  $("exp-date").value = toDateInput(defaultDateFor(currentMonth));
+  $("exp-amount").value = "";
+  $("exp-note").value = "";
+  $("exp-error").textContent = "";
+  updateRemainingHint();
+  showModal("modal-expense", "exp-amount");
+}
+
+async function submitExpense(){
+  const catId = $("exp-cat").value;
+  const amount = parseAmount($("exp-amount").value);
+  const note = $("exp-note").value.trim();
+  const dateVal = $("exp-date").value;
+  if(!catId){ $("exp-error").textContent = "Pick a category."; return; }
+  if(!(amount > 0)){ $("exp-error").textContent = "Enter an amount greater than $0."; $("exp-amount").focus(); return; }
+  if(!dateVal){ $("exp-error").textContent = "Pick a date."; return; }
+  const iso = dateToIso(dateVal);
+  const mk = getMonthKey(new Date(iso));
+  // Work out what's left before saving; the listener updates state as soon as the write lands.
+  const rem = (budgetForMonth(mk)[catId]||0) - (spentByCategory(mk)[catId]||0) - amount;
+  const exp = { id:uid(), categoryId:catId, amount, note, user:currentUser, date:iso, monthKey:mk };
+  const btn = document.querySelector("#form-expense .primary-btn");
+  btn.disabled = true;
+  const ok = await safeWrite(()=>updateDoc(DOC, { expenses: arrayUnion(exp) }));
+  btn.disabled = false;
+  if(!ok) return;
+  store("budget:lastCat", catId);
   closeModal("modal-expense");
-  document.getElementById("exp-amount").value="";
-  document.getElementById("exp-note").value="";
-  const cat = (state.categories||[]).find(c=>c.id===catId);
-  const bfm = budgetForMonth();
-  const sbc = spentByCategory();
-  const rem = (bfm[catId]||0)-(sbc[catId]||0)-amount;
-  showToast(`✓ $${amount.toFixed(2)} → ${cat?.name}. Left: $${rem.toFixed(2)}`);
-};
+  const cat = catById(catId);
+  showToast(`✓ ${money(amount)} to ${cat?.name}. ${rem>=0 ? money(rem)+" left" : money(-rem)+" over"}${mk!==currentMonth?` (${monthLabel(mk)})`:""}`);
+}
 
-window.deleteExpense = async function(id){
+async function deleteExpense(id){
   const exp = (state.expenses||[]).find(e=>e.id===id);
   if(!exp) return;
-  await updateDoc(DOC, { expenses: arrayRemove(exp) });
-  showToast("Expense removed");
-};
+  // Delete by id inside a transaction, so it still works if the other phone edited this expense.
+  const ok = await mutate(d=>({ expenses: d.expenses.filter(e=>e.id!==id) }));
+  if(!ok) return;
+  showToast(`Deleted ${money(exp.amount)} ${catById(exp.categoryId)?.name||""}`, {
+    label: "Undo",
+    run: async ()=>{ if(await safeWrite(()=>updateDoc(DOC, { expenses: arrayUnion(exp) }))) showToast("Expense restored"); }
+  });
+}
 
-window.openEditExpense = function(id){
+function openEditExpense(id){
   editingExpenseId = id;
   const exp = (state.expenses||[]).find(e=>e.id===id);
   if(!exp) return;
-  const catSel = document.getElementById("edit-exp-cat");
-  catSel.innerHTML = (state.categories||[]).map(c=>`<option value="${c.id}"${c.id===exp.categoryId?" selected":""}>${c.name}</option>`).join("");
-  document.getElementById("edit-exp-amount").value = exp.amount;
-  document.getElementById("edit-exp-note").value = exp.note||"";
-  openModal("modal-editexp");
-};
+  $("edit-exp-cat").innerHTML = (state.categories||[]).map(c=>`<option value="${esc(c.id)}"${c.id===exp.categoryId?" selected":""}>${esc(c.name)}</option>`).join("");
+  $("edit-exp-amount").value = exp.amount;
+  $("edit-exp-note").value = exp.note||"";
+  $("edit-exp-date").value = toDateInput(new Date(exp.date));
+  $("editexp-error").textContent = "";
+  showModal("modal-editexp", "edit-exp-amount");
+}
 
-window.submitEditExpense = async function(){
+async function submitEditExpense(){
   const exp = (state.expenses||[]).find(e=>e.id===editingExpenseId);
   if(!exp) return;
-  const catId = document.getElementById("edit-exp-cat").value;
-  const amount = parseFloat(document.getElementById("edit-exp-amount").value);
-  const note = document.getElementById("edit-exp-note").value.trim();
-  if(!catId||!amount||amount<=0) return;
-  const updated = { ...exp, categoryId:catId, amount, note };
-  const newExps = (state.expenses||[]).map(e=>e.id===editingExpenseId?updated:e);
-  await setDoc(DOC, { ...state, expenses:newExps });
+  const catId = $("edit-exp-cat").value;
+  const amount = parseAmount($("edit-exp-amount").value);
+  const note = $("edit-exp-note").value.trim();
+  const dateVal = $("edit-exp-date").value;
+  if(!(amount > 0)){ $("editexp-error").textContent = "Enter an amount greater than $0."; return; }
+  if(!dateVal){ $("editexp-error").textContent = "Pick a date."; return; }
+  const dateChanged = dateVal !== toDateInput(new Date(exp.date));
+  const iso = dateChanged ? fromDateInput(dateVal).toISOString() : exp.date;
+  const changes = { categoryId:catId, amount, note, date:iso, monthKey:getMonthKey(new Date(iso)) };
+  const ok = await mutate(d=>({ expenses: d.expenses.map(e=>e.id===editingExpenseId ? { ...e, ...changes } : e) }));
+  if(!ok) return;
   closeModal("modal-editexp");
   showToast("✓ Expense updated");
-};
+}
 
-window.submitAddCategory = async function(){
-  const name = document.getElementById("addcat-name").value.trim();
-  const budget = parseFloat(document.getElementById("addcat-budget").value);
-  if(!name||!budget) return;
+// ── Actions: categories ───────────────────────────────────────────────────
+async function submitAddCategory(){
+  const name = $("addcat-name").value.trim();
+  const budget = parseAmount($("addcat-budget").value);
+  if(!name){ $("addcat-error").textContent = "Give the category a name."; return; }
+  if(!(budget >= 0)){ $("addcat-error").textContent = "Enter a monthly budget ($0 or more)."; return; }
+  if((state.categories||[]).some(c=>c.name.toLowerCase()===name.toLowerCase())){ $("addcat-error").textContent = "A category with that name already exists."; return; }
   const cat = { id:uid(), name, budget, color:selectedAddColor };
-  await updateDoc(DOC, { categories: arrayUnion(cat) });
+  const ok = await safeWrite(()=>updateDoc(DOC, { categories: arrayUnion(cat) }));
+  if(!ok) return;
   closeModal("modal-addcat");
-  document.getElementById("addcat-name").value="";
-  document.getElementById("addcat-budget").value="";
   showToast(`✓ "${name}" added`);
-};
+}
 
-window.openEditCat = function(id){
+function openEditCat(id){
   editingCatId = id;
-  const cat = (state.categories||[]).find(c=>c.id===id);
+  const cat = catById(id);
   if(!cat) return;
-  document.getElementById("editcat-name").value = cat.name;
-  document.getElementById("editcat-budget").value = cat.budget;
+  $("editcat-name").value = cat.name;
+  $("editcat-budget").value = cat.budget;
+  $("editcat-error").textContent = "";
   selectedEditColor = cat.color;
   renderPalette("editcat-palette","edit");
-  openModal("modal-editcat");
-};
+  showModal("modal-editcat", "editcat-name");
+}
 
-window.submitEditCategory = async function(){
-  const name = document.getElementById("editcat-name").value.trim();
-  const budget = parseFloat(document.getElementById("editcat-budget").value);
-  if(!name||!budget) return;
-  const newCats = (state.categories||[]).map(c=>c.id===editingCatId?{...c,name,budget,color:selectedEditColor}:c);
-  await setDoc(DOC,{...state,categories:newCats});
+async function submitEditCategory(){
+  const name = $("editcat-name").value.trim();
+  const budget = parseAmount($("editcat-budget").value);
+  if(!name){ $("editcat-error").textContent = "Give the category a name."; return; }
+  if(!(budget >= 0)){ $("editcat-error").textContent = "Enter a monthly budget ($0 or more)."; return; }
+  const ok = await mutate(d=>({ categories: d.categories.map(c=>c.id===editingCatId?{...c,name,budget,color:selectedEditColor}:c) }));
+  if(!ok) return;
   closeModal("modal-editcat");
   showToast("✓ Category updated");
-};
+}
 
-window.deleteCat = async function(id){
-  const newCats = (state.categories||[]).filter(c=>c.id!==id);
-  const newExps = (state.expenses||[]).filter(e=>e.categoryId!==id);
-  await setDoc(DOC,{...state,categories:newCats,expenses:newExps});
-  showToast("Category removed");
-};
-
-window.openCategoryDetail = function(catId){
-  const cat = (state.categories||[]).find(c=>c.id===catId);
+async function deleteCat(id){
+  const cat = catById(id);
   if(!cat) return;
-  const bfm = budgetForMonth();
-  const exps = monthExpenses().filter(e=>e.categoryId===catId);
-  const spent = exps.reduce((s,e)=>s+e.amount,0);
-  const budget = bfm[catId]||0;
+  const count = (state.expenses||[]).filter(e=>e.categoryId===id).length;
+  const msg = count
+    ? `Delete "${cat.name}"?\n\nThis also deletes its ${count} expense${count===1?"":"s"} in every month, and can't be undone.`
+    : `Delete "${cat.name}"?`;
+  if(!confirm(msg)) return;
+  const ok = await mutate(d=>({
+    categories: d.categories.filter(c=>c.id!==id),
+    expenses: d.expenses.filter(e=>e.categoryId!==id),
+  }));
+  if(ok) showToast(`"${cat.name}" deleted`);
+}
+
+function openCategoryDetail(catId){
+  detailCatId = catId;
+  renderCategoryDetail();
+  showModal("modal-catdetail");
+}
+
+function renderCategoryDetail(){
+  const cat = catById(detailCatId);
+  if(!cat) return;
+  const color = safeColor(cat.color);
+  const exps = monthExpenses().filter(e=>e.categoryId===detailCatId);
+  const spent = exps.reduce((s,e)=>s+(Number(e.amount)||0),0);
+  const budget = budgetForMonth()[detailCatId]||0;
   const left = budget - spent;
   const over = left < 0;
+  const pace = currentMonth===getMonthKey() && left>0 ? ` · ${paceInfo(currentMonth,left).text}` : "";
 
-  document.getElementById("catdetail-title").textContent = cat.name;
-  document.getElementById("catdetail-sub").innerHTML =
-    `Budget: <strong>$${budget.toFixed(2)}</strong> &nbsp;·&nbsp; Spent: <strong style="color:${over?"#C97B7B":"#7B9E87"}">$${spent.toFixed(2)}</strong> &nbsp;·&nbsp; ${over?`<span style="color:#C97B7B">-$${Math.abs(left).toFixed(2)} over</span>`:`<span style="color:#7B9E87">$${left.toFixed(2)} left</span>`}`;
+  $("catdetail-title").textContent = cat.name;
+  $("catdetail-sub").innerHTML =
+    `${esc(monthLabel(currentMonth))} · Budget <strong>${money(budget)}</strong> · Spent <strong>${money(spent)}</strong> · ${over?`<span class="over-text">${money(-left)} over</span>`:`<span class="ok-text">${money(left)} left${esc(pace)}</span>`}`;
 
-  const list = document.getElementById("catdetail-list");
-  if(!exps.length){
-    list.innerHTML = `<div class="empty" style="margin-top:30px">No expenses logged for ${cat.name} this month</div>`;
-  } else {
-    list.innerHTML = exps.map(e=>{
-      const d = new Date(e.date);
-      const uColor = e.user==="DAY"?"#C97B7B":"#7B9E87";
-      return `<div class="tx-row" style="margin-bottom:8px">
-        <div class="tx-icon" style="background:${cat.color}22"><div class="tx-dot" style="background:${cat.color}"></div></div>
-        <div class="tx-info" style="margin-left:12px">
-          <div class="tx-name">${e.note||"—"}</div>
-          <div class="tx-meta">${d.toLocaleDateString()} &nbsp;·&nbsp; <span style="color:${uColor};font-weight:700">${e.user}</span></div>
-        </div>
-        <span class="tx-amount">$${e.amount.toFixed(2)}</span>
-      </div>`;
-    }).join("");
-  }
-  openModal("modal-catdetail");
-};
+  $("catdetail-list").innerHTML = exps.length
+    ? exps.map(e=>{
+        const uColor = USERS[e.user]?.color || "#6F665C";
+        return `<div class="tx-row" style="margin-bottom:8px">
+          <div class="tx-icon" style="background:${color}22" aria-hidden="true"><div class="tx-dot" style="background:${color}"></div></div>
+          <div class="tx-info">
+            <div class="tx-name">${esc(e.note||"No note")}</div>
+            <div class="tx-meta">${esc(friendlyDate(e.date))} · <span style="color:${uColor};font-weight:700">${esc(e.user)}</span></div>
+          </div>
+          <div class="tx-actions"><span class="tx-amount">${money(e.amount)}</span>
+          <button class="edit-btn" data-edit-exp="${esc(e.id)}" aria-label="Edit ${money(e.amount)} ${esc(e.note||"")}">Edit</button></div>
+        </div>`;
+      }).join("")
+    : `<div class="empty" style="margin-top:30px">Nothing logged for ${esc(cat.name)} in ${esc(monthLabel(currentMonth))}</div>`;
+}
 
-window.openEditBudget = function(catId){
-  editingBudgetCatId = catId;
-  const cat = (state.categories||[]).find(c=>c.id===catId);
-  document.getElementById("editbudget-title").textContent = `Budget: ${cat?.name}`;
-  const bfm = budgetForMonth();
-  document.getElementById("editbudget-amount").value = bfm[catId]||0;
-  openModal("modal-editbudget");
-};
+function openEditBudget(){
+  const cat = catById(detailCatId);
+  if(!cat) return;
+  $("editbudget-title").textContent = cat.name;
+  $("editbudget-label").textContent = `Budget for ${monthLabel(currentMonth)} ($)`;
+  $("editbudget-amount").value = budgetForMonth()[detailCatId]||0;
+  $("editbudget-error").textContent = "";
+  showModal("modal-editbudget", "editbudget-amount");
+}
 
-window.submitEditBudget = async function(){
-  const amount = parseFloat(document.getElementById("editbudget-amount").value);
-  if(!amount) return;
-  const newBudgets = { ...state.budgets, [currentMonth]:{ ...(state.budgets[currentMonth]||{}), [editingBudgetCatId]:amount } };
-  await setDoc(DOC,{...state,budgets:newBudgets});
+async function submitEditBudget(){
+  const amount = parseAmount($("editbudget-amount").value);
+  if(!(amount >= 0)){ $("editbudget-error").textContent = "Enter a budget of $0 or more."; return; }
+  const mk = currentMonth, catId = detailCatId;
+  const ok = await mutate(d=>({ budgets: { ...d.budgets, [mk]: { ...(d.budgets[mk]||{}), [catId]: amount } } }));
+  if(!ok) return;
   closeModal("modal-editbudget");
-  showToast("✓ Budget updated");
-};
+  showToast(`✓ ${catById(catId)?.name} budget for ${monthLabel(mk)} is now ${money(amount)}`);
+}
 
 // ── Modal helpers ─────────────────────────────────────────────────────────
-window.openModal = function(id){
-  if(id==="modal-expense"){
-    const catSel = document.getElementById("exp-cat");
-    catSel.innerHTML = (state.categories||[]).map(c=>`<option value="${c.id}">${c.name}</option>`).join("");
-    updateRemainingHint();
+function showModal(id, focusId){
+  if(!document.querySelector(".modal-overlay.open")) lastFocus = document.activeElement;
+  document.querySelectorAll(".modal-overlay.open").forEach(m=>{ if(m.id!==id) m.classList.remove("open"); });
+  $(id).classList.add("open");
+  const target = focusId ? $(focusId) : $(id).querySelector(".modal-close");
+  setTimeout(()=>target?.focus(), 50);
+}
+function openModal(id){
+  if(id==="modal-expense") return openExpenseModal();
+  if(id==="modal-addcat"){
+    selectedAddColor=PALETTE[0]; renderPalette("addcat-palette","add");
+    $("addcat-name").value=""; $("addcat-budget").value=""; $("addcat-error").textContent="";
+    return showModal(id, "addcat-name");
   }
-  if(id==="modal-addcat"){ selectedAddColor=PALETTE[0]; renderPalette("addcat-palette","add"); }
-  document.getElementById(id).classList.add("open");
-};
+  showModal(id);
+}
+function closeModal(id){
+  $(id).classList.remove("open");
+  if(lastFocus && document.body.contains(lastFocus)) lastFocus.focus();
+}
 
-window.closeModal = function(id){ document.getElementById(id).classList.remove("open"); };
-
-window.updateRemainingHint = function(){
-  const catId = document.getElementById("exp-cat").value;
-  const hint = document.getElementById("remaining-hint");
+function updateRemainingHint(){
+  const catId = $("exp-cat").value;
+  const hint = $("remaining-hint");
   if(!catId){ hint.textContent=""; return; }
-  const bfm = budgetForMonth();
-  const sbc = spentByCategory();
-  const rem = (bfm[catId]||0)-(sbc[catId]||0);
-  const cat = (state.categories||[]).find(c=>c.id===catId);
-  hint.textContent = `Remaining in ${cat?.name}: $${rem.toFixed(2)}`;
-  hint.style.color = rem>=0?"#7B9E87":"#C97B7B";
-};
+  const dateVal = $("exp-date").value;
+  const mk = dateVal ? getMonthKey(fromDateInput(dateVal)) : currentMonth;
+  const rem = (budgetForMonth(mk)[catId]||0)-(spentByCategory(mk)[catId]||0);
+  const cat = catById(catId);
+  hint.textContent = rem>=0 ? `${money(rem)} left in ${cat?.name} for ${monthLabel(mk)}` : `${cat?.name} is ${money(-rem)} over for ${monthLabel(mk)}`;
+  hint.style.color = rem>=0?"#4F7360":"#A85656";
+}
 
 function renderPalette(containerId, mode){
   const sel = mode==="add"?selectedAddColor:selectedEditColor;
-  document.getElementById(containerId).innerHTML = PALETTE.map(c=>`
-    <div class="color-swatch${c===sel?" selected":""}" style="background:${c}" onclick="selectColor('${c}','${mode}','${containerId}')"></div>
+  $(containerId).innerHTML = PALETTE.map((c,i)=>`
+    <button type="button" class="color-swatch${c===sel?" selected":""}" style="background:${c}" role="radio" aria-checked="${c===sel}" aria-label="Color ${i+1}" data-color="${c}" data-mode="${mode}" data-palette="${containerId}"></button>
   `).join("");
 }
 
-window.selectColor = function(color, mode, containerId){
-  if(mode==="add") selectedAddColor=color;
-  else selectedEditColor=color;
-  renderPalette(containerId, mode);
-};
-
-// Close modal on overlay click
-document.querySelectorAll(".modal-overlay").forEach(o=>{
-  o.addEventListener("click", e=>{ if(e.target===o) o.classList.remove("open"); });
-});
-
 // ── Toast ─────────────────────────────────────────────────────────────────
 let toastTimer;
-function showToast(msg){
-  const t = document.getElementById("toast");
-  t.textContent = msg;
-  t.style.display = "block";
+function showToast(msg, action){
+  const t = $("toast");
+  t.innerHTML = "";
+  const span = document.createElement("span");
+  span.textContent = msg;
+  t.appendChild(span);
+  if(action){
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = action.label;
+    b.onclick = ()=>{ t.style.display="none"; action.run(); };
+    t.appendChild(b);
+  }
+  t.style.display = "flex";
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.style.display="none", 3000);
+  toastTimer = setTimeout(()=>t.style.display="none", action ? 6000 : 3500);
 }
-window.showToast = showToast;
+
+// ── Event wiring (no inline handlers, so stored text can't inject code) ──
+document.addEventListener("click", e=>{
+  const el = e.target.closest("button,[data-cat]");
+  if(!el) return;
+  const d = el.dataset;
+  if(d.user) return selectUser(d.user);
+  if(d.pin) return pinKey(d.pin);
+  if(d.view) return switchView(d.view);
+  if(d.open) return openModal(d.open);
+  if(d.close) return closeModal(d.close);
+  if(d.cat) return openCategoryDetail(d.cat);
+  if(d.editExp) return openEditExpense(d.editExp);
+  if(d.delExp) return deleteExpense(d.delExp);
+  if(d.editCat) return openEditCat(d.editCat);
+  if(d.delCat) return deleteCat(d.delCat);
+  if(d.filter){ logFilter = d.filter; return renderLog(); }
+  if(d.report){ reportMonth = d.report; return renderReports(); }
+  if(d.color){
+    if(d.mode==="add") selectedAddColor=d.color; else selectedEditColor=d.color;
+    return renderPalette(d.palette, d.mode);
+  }
+});
+document.addEventListener("keydown", e=>{
+  const card = e.target.closest?.("[data-cat]");
+  if(card && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); openCategoryDetail(card.dataset.cat); return; }
+  if(e.key==="Escape"){
+    const open = [...document.querySelectorAll(".modal-overlay.open")].pop();
+    if(open) closeModal(open.id);
+    return;
+  }
+  if($("pin-screen").style.display==="flex"){
+    if(/^[0-9]$/.test(e.key)) pinKey(e.key);
+    else if(e.key==="Backspace") pinBackspace();
+  }
+});
+
+$("pin-del").addEventListener("click", pinBackspace);
+$("pin-back").addEventListener("click", backToUsers);
+$("signout-btn").addEventListener("click", signOut);
+$("month-prev").addEventListener("click", ()=>changeMonth(-1));
+$("month-next").addEventListener("click", ()=>changeMonth(1));
+$("month-label").addEventListener("click", ()=>{ currentMonth = getMonthKey(); renderMonthLabel(); renderAll(); });
+$("exp-cat").addEventListener("change", updateRemainingHint);
+$("exp-date").addEventListener("change", updateRemainingHint);
+$("catdetail-log").addEventListener("click", ()=>openExpenseModal(detailCatId));
+$("catdetail-budget").addEventListener("click", openEditBudget);
+$("editexp-delete").addEventListener("click", ()=>{ const id = editingExpenseId; closeModal("modal-editexp"); deleteExpense(id); });
+
+const forms = {
+  "form-expense": submitExpense, "form-editexp": submitEditExpense, "form-addcat": submitAddCategory,
+  "form-editcat": submitEditCategory, "form-editbudget": submitEditBudget,
+};
+Object.entries(forms).forEach(([id,fn])=>$(id).addEventListener("submit", e=>{ e.preventDefault(); fn(); }));
+
+// Close a sheet by tapping outside it, unless something has been typed into it.
+document.querySelectorAll(".modal-overlay").forEach(o=>{
+  o.addEventListener("click", e=>{
+    if(e.target!==o) return;
+    const typed = [...o.querySelectorAll("input[type=number],input[type=text]")].some(i=>i.value && i.value!==i.defaultValue);
+    if(typed && o.id==="modal-expense") return;
+    closeModal(o.id);
+  });
+});
 
 // ── Boot ──────────────────────────────────────────────────────────────────
+renderLoginUsers();
 renderMonthLabel();
-document.getElementById("loading").style.display = "none";
-document.getElementById("login-screen").style.display = "flex";
+$("loading").style.display = "none";
+const lastUser = load("budget:lastUser");
+if(lastUser && USERS[lastUser]) selectUser(lastUser); else showScreen("login-screen");
 
 </script>
-
 
 </body></html>
